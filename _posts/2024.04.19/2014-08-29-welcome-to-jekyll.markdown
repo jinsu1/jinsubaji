@@ -6,32 +6,46 @@ categories: jekyll update
 tags: featured
 image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.JPG
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
+### 형변환
+- 변수의 자료형이 변환되는 것을 의미한다.
+- 특정 자료형의 값을 다른 자료형의 변수에 대입할 수 있다.
+- **암묵적 형병환**과 **명시적 형변환**의 두 종류가 있다.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-Jekyll also offers powerful support for code snippets:
+```c
+#include <stdio.h>
+#include <windows.h>
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+int main() {
+    SetConsoleOutputCP(CP_UTF8);
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+    char a = 100;
+    int size_a = sizeof(a);
+    printf("char a=%d, %dbyte\n", a, size_a);
 
-{% highlight js %}
+    short b = a;
+    int size_b = sizeof(b);
+    printf("short b=%d, %dbyte\n", b, size_b);
 
-<footer class="site-footer">
- <a class="subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"> <span class="tooltip"> <i class="fa fa-rss"></i> Subscribe!</span></a>
-  <div class="inner">a
-   <section class="copyright">All content copyright <a href="mailto:{{ site.email}}">{{ site.name }}</a> &copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</section>
-   <section class="poweredby">Made with <a href="http://jekyllrb.com"> Jekyll</a></section>
-  </div>
-</footer>
-{% endhighlight %}
+    int c = b;
+    int size_c = sizeof(c);
+    printf("int c=%d, %dbyte\n", c, size_c);
+
+    float d = c;
+    int size_d = sizeof(d);
+    printf("float d=%f, %dbyte\n", d, size_d);
+
+    double e = d;
+    int size_e = sizeof(e);
+    printf("double e=%f, %dbyte\n", e, size_e);
+
+
+    return 0;
+}
+```
+>실행결과
+
+![실행결과](/assets/images/contents/casting1.PNG)
 
 
 [jekyll]:      http://jekyllrb.com
