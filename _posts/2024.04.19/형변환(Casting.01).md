@@ -12,7 +12,7 @@ image: /assets/article_images/2014-08-29-welcome-to-jekyll/desktop.JPG
 - **암묵적 형병환**과 **명시적 형변환**의 두 종류가 있다.
 
 
-```
+```c
 #include <stdio.h>
 #include <windows.h>
 
@@ -43,6 +43,8 @@ int main() {
     return 0;
 }
 ```
+>실행결과
+
 ![실행결과](/assets/images/contents/casting1.PNG)
 
 
