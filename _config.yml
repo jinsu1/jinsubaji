@@ -4,11 +4,11 @@ gems:
   - jekyll-paginate
 
 # Site settings
-title: "Mediator"
+title: "진수 블로그"
 description: > # this means to ignore newlines until "email:"
-   A Jekyll theme - Medium inspired
+   공부노트
 
-email: a-mail@mail.mail
+email: jinsu4205@gmail.com
 #blog logo
 logo: "/assets/images/df_logo.jpg"
 float_logo: true # true, false (default)
