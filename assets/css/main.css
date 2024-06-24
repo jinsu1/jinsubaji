@@ -888,7 +888,7 @@ table tfoot td {
   position: relative;
 }
 
-.post, .article-page {
+.post{
   background-color: #fff;
 }
 
