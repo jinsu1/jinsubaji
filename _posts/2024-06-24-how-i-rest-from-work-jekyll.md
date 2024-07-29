@@ -26,9 +26,11 @@ tags: [jekyll ,ruby, blog]
 -원하는 위치에 git clone 받을 폴더 생성    
 -생성한 폴더 경로에서 cmd 실행
 -git config --global user.name(git계정인증)   
--git config --global user.email(global로 한 경우 자동로그인이 항상되는데 삭제하고 싶은 경우 windows 자격 증명 관리에서 삭제할 수 있음)   
--git config --local user.name(다른 사람의 컴퓨터 사용할 때 프로젝트에 한하여 로그인할 경우 => 푸쉬할 때마다 계정인증 해야함)   
+-git config --global user.email(global[전역]계정등록 삭제하고 싶은 경우 windows 자격 증명 관리에서 삭제할 수 있음)   
+-git config --local user.name(프로젝트[지역]한에서 계정 등록)
 -git config --local user.email   
+>공용으로 사용하는 컴퓨터에서 계정등록을하되(계정등록하지않으면 깃허브에 잔디생성x) 푸쉬할때 2차 인증 할 방법 개선 필요
+
 -git config user.name (현재 로그인 계정 확인)   
 -git config --global --unset user.name(전역으로 설정된 config 삭제)   
 -git config --global --unset user.email   
