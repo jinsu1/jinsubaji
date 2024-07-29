@@ -40,7 +40,7 @@ tags: [jekyll ,ruby, blog]
 -git push -u origin main   
 -bundle install   
 -bundle exec jekyll serve 로컬서버 띄우기 (git push없이 바로 변경사항 확인)   
-
+asdasdasd
 ### theme
 -[jekyll theme download](http://jekyllthemes.org/) 에서 테마 다운로드 후 로컬 폴더에 압축풀기   
 -_config url 나의 github url로 변경 (baseurl 수정안 할 시 css가 안먹을 수 있음)   
