@@ -29,7 +29,9 @@ tags: [jekyll ,ruby, blog]
 -git config --global user.email(global로 한 경우 자동로그인이 항상되는데 삭제하고 싶은 경우 windows 자격 증명 관리에서 삭제할 수 있음)   
 -git config --local user.name(다른 사람의 컴퓨터 사용할 때 프로젝트에 한하여 로그인할 경우 => 푸쉬할 때마다 계정인증 해야함)   
 -git config --local user.email   
--git config --list (현재 로그인 계정 확인)
+-git config user.name (현재 로그인 계정 확인)   
+-git config --unset --global user.name(전역으로 설정된 config 삭제)   
+-git config --unset --global user.email   
 -git init   
 -git add .   
 -git commit -m '커밋내용'   
