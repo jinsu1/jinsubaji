@@ -30,8 +30,8 @@ tags: [jekyll ,ruby, blog]
 -git config --local user.name(다른 사람의 컴퓨터 사용할 때 프로젝트에 한하여 로그인할 경우 => 푸쉬할 때마다 계정인증 해야함)   
 -git config --local user.email   
 -git config user.name (현재 로그인 계정 확인)   
--git config --unset --global user.name(전역으로 설정된 config 삭제)   
--git config --unset --global user.email   
+-git config --global --unset user.name(전역으로 설정된 config 삭제)   
+-git config --global --unset user.email   
 -git init   
 -git add .   
 -git commit -m '커밋내용'   
@@ -40,7 +40,7 @@ tags: [jekyll ,ruby, blog]
 -git push -u origin main   
 -bundle install   
 -bundle exec jekyll serve 로컬서버 띄우기 (git push없이 바로 변경사항 확인)   
-asdasdasd
+
 ### theme
 -[jekyll theme download](http://jekyllthemes.org/) 에서 테마 다운로드 후 로컬 폴더에 압축풀기   
 -_config url 나의 github url로 변경 (baseurl 수정안 할 시 css가 안먹을 수 있음)   
