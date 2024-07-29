@@ -21,7 +21,7 @@ tags: [jekyll ,ruby, blog]
 -gemfile 위치에서 bundle install   
 
 
-### connect
+### Connect & Git & MarkDown
 -github에 리포생성   
 -원하는 위치에 git clone 받을 폴더 생성    
 -생성한 폴더 경로에서 cmd 실행
@@ -42,6 +42,8 @@ tags: [jekyll ,ruby, blog]
 -git push -u origin main   
 -bundle install   
 -bundle exec jekyll serve 로컬서버 띄우기 (git push없이 바로 변경사항 확인)   
+[Git사용설명서.PDF](https://github.com/user-attachments/files/16408329/05-Github.pdf)   
+[Markdown문법.PDF](https://github.com/user-attachments/files/16408354/04-.pdf)
 
 ### theme
 -[jekyll theme download](http://jekyllthemes.org/) 에서 테마 다운로드 후 로컬 폴더에 압축풀기   
