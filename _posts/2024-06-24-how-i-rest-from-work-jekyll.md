@@ -22,7 +22,7 @@ tags: [jekyll ,ruby, blog, git, markdown]
 
 
 ### Connect & Git & MarkDown
--인증서 생성하기(shh) 사용할 컴퓨터마다 적용
+-인증서 생성하기(shh) : 사용 할 컴퓨터마다 적용
 > clone할 때 SHH와 HTTP의 차이점 =? http는 push, pull할 때 계정 아이디,암호를 물어봄(예전에는 매번 물어봤으나 최근엔 자동으로 자격 증명이 등록되어 최초 1번만 인증) shh는 pc에 인증서가 있기때문에 인증을 하지않음. 결론 = 예전에는 필수 였겠지만 지금은 별 차이 없음
 ```
 $ ssh-keygen -t ed25519 -C "leekh4232@gmail.com"
@@ -36,12 +36,12 @@ $ ssh-keygen -t ed25519 -C "leekh4232@gmail.com"
 -git config --global user.email(global[전역]계정등록 삭제하고 싶은 경우 windows 자격 증명 관리에서 삭제할 수 있음)   
 -git config --local user.name(프로젝트[지역]한에서 계정 등록)
 -git config --local user.email   
->공용으로 사용하는 컴퓨터에서 계정등록을하되(계정등록하지않으면 깃허브에 잔디생성x) 푸쉬할때 2차 인증 할 방법 개선 필요
+>공용으로 사용하는 컴퓨터에서 계정등록을하되(계정등록하지않으면 깃허브에 잔디생성x) 푸쉬할때 2차 인증 할 방법? 
 
 -git config user.name (현재 로그인 계정 확인)   
 -git config --global --unset user.name(전역으로 설정된 config 삭제)   
 -git config --global --unset user.email   
--git init   
+-git init (깃허브에서 project를 만들어 clone하지 않고 컴퓨터에서 작업을 먼저 시작했을 때 저장소를 생성한다.)   
 -git branch -M main   
 -git add .   
 -git commit -m '커밋내용'   
