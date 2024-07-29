@@ -21,6 +21,7 @@ tags: [VScode , Extentions, Setting]
 -FontSize Shortcuts   
 -prettier   
 -vscode-pdf   
+-git history   
 
 ## setting
 
