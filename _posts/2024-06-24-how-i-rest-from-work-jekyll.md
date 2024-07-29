@@ -1,11 +1,11 @@
 ---
 layout: post
-title: jekyll(지킬)
+title: jekyll & Git & MarkDown
 date: 2024-07-26
 description: description # Add post description (optional)
 img: /postImg/jekyll_logo.png # Add image post (optional)
 fig-caption: caption # Add figcaption (optional)
-tags: [jekyll ,ruby, blog]
+tags: [jekyll ,ruby, blog, git, markdown]
 ---
 ## jekyll
 ### ruby
@@ -22,6 +22,12 @@ tags: [jekyll ,ruby, blog]
 
 
 ### Connect & Git & MarkDown
+-인증서 생성하기(shh) 사용할 컴퓨터마다 적용
+```c
+$ ssh-keygen -t ed25519 -C "leekh4232@gmail.com"
+```
+>완료 기호들 뜰 때까지 엔터사용(비밀번호 미설정) 열어서 github의 setting ->shh메뉴에 new shh key 생성 후 title 입력하고 사용자폴더에 pub파일열어서 내용 복사 붙여넣기하여 생성. 사용하지 않는 컴퓨터는 삭제
+
 -github에 리포생성   
 -원하는 위치에 git clone 받을 폴더 생성    
 -생성한 폴더 경로에서 cmd 실행
