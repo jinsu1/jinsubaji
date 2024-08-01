@@ -2,7 +2,7 @@
 layout: post
 title: C언어 - 배열
 date: 2024-06-24
-description: description # Add post description (optional)
+description: c_language # Add post description (optional)
 img: /postImg/C_Thumbnail.png # Add image post (optional)
 fig-caption: caption # Add figcaption (optional)
 tags: [C언어 ,배열]

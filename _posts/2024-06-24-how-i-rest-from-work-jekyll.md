@@ -2,7 +2,7 @@
 layout: post
 title: jekyll & MarkDown
 date: 2024-07-26
-description: description # Add post description (optional)
+description: jekyll # Add post description (optional)
 img: /postImg/jekyll_logo.png # Add image post (optional)
 fig-caption: caption # Add figcaption (optional)
 tags: [jekyll ,ruby, blog, git, markdown]

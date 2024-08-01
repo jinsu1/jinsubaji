@@ -10,7 +10,7 @@ tags: [git, guide]
 ## Git 사용법
 
 -인증서 생성하기(shh) : 사용 할 컴퓨터마다 적용
-> clone할 때 SHH와 HTTP의 차이점 =? http는 push, pull할 때 계정 아이디,암호를 물어봄(예전에는 매번 물어봤으나 최근엔 자동으로 자격 증명이 등록되어 최초 1번만 인증) shh는 pc에 인증서가 있기때문에 인증을 하지않음. 결론 = 예전에는 필수 였겠지만 지금은 별 차이 없으나 <span style="color:ffd33d">ssh사용을 권장</span>하는 이유는 github 설정에서 key를 삭제해 원하는 컴퓨터의 권한을 원격으로 박탈할 수 있지만 https는 컴퓨터에 직접가서 일반 자격 증명을 지워야함. 이미 https로 인증을 한 컴퓨터가 외부에 있다면 레포지토리의 https주소를 바꾸는 방법도 있음
+> clone할 때 SHH와 HTTP의 차이점 =? http는 push, pull할 때 계정 아이디,암호를 물어봄(예전에는 매번 물어봤으나 최근엔 자동으로 자격 증명이 등록되어 최초 1번만 인증) shh는 pc에 인증서가 있기때문에 인증을 하지않음. 결론 = <span style="color:ffd33d">ssh사용을 권장</span>하는 이유는 shh가 업로드 및 다운로드 속도가 훨씬 빠르며 github 설정에서 key를 삭제해 원하는 컴퓨터의 권한을 원격으로 박탈할 수 있지만 https는 컴퓨터에 직접가서 일반 자격 증명을 지워야함. 이미 https로 인증을 한 컴퓨터가 외부에 있다면 레포지토리의 https주소를 바꾸는 방법도 있음
 
 ```
 $ ssh-keygen -t ed25519 -C "leekh4232@gmail.com"
@@ -34,6 +34,8 @@ $ ssh-keygen -t ed25519 -C "leekh4232@gmail.com"
 -git remote add origin 리포주소
 -git push origin main   
 -git push -u origin main(-u옵션 : 최초 입력 이후 origin main을 자동으로 등록해 이후에 git push만 입력해도됨)
+> -u == --force --set-upstream 축약형인가?
+> 
 -git push -f origin main(-f옵션 : 리포내용과 관계없이 내 프로젝트를 강제로 업로드함. 팀원이 있을 경우 팀원이 푸쉬할 때 충돌이 발생할 수 있으니 개인이나 꼭 필요한 상황에만 사용)   
 -git pull origin main
  
