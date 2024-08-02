@@ -20,6 +20,7 @@ tags: [font, img, icon, etc]
 -GDWeb
 -pinterest
 
-### HTML, CSS
+### HTML, CSS, javascript
 -MDN
+-w3school
 

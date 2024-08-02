@@ -29,3 +29,17 @@ tags: [VScode , Extentions, Setting]
 
 -Terminal Default Profile -> Command Prompt   
 -설정 - editor: Detect Indentation (tab 사이즈 변경 후 재부팅해도 유지하도록하려면 체크 해제)
+
+## emmet
+-반복 *   
+-병렬 +   
+-자식 >   
+-클래스 .className or div.className   
+-id #  
+-그룹화 ( )   
+-속성 [ ]   
+-텍스트(내용) { }   
+-넘버링 $   
+
+ex) div>div.user_id#user_id{내용}+(ul>li*2)+div[class="user_name" id="user_name"]{내용}+button.button\$*3{확인\$}   
+>![emmet실행결과](/assets/img/postImg/emmetResult.PNG)
