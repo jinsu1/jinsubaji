@@ -28,7 +28,17 @@ tags: [VScode , Extentions, Setting]
 ## setting
 
 -Terminal Default Profile -> Command Prompt   
--설정 - editor: Detect Indentation (tab 사이즈 변경 후 재부팅해도 유지하도록하려면 체크 해제)
+-설정 - editor: Detect Indentation (tab 사이즈 변경 후 재부팅해도 유지하도록하려면 체크 해제)   
+-에멧 자동 줄넘김 your setting (json)에들어가서 코드를 추가해준다. ,로 코드 간 구별을 꼭 해주어야한다   
+    "emmet.syntaxProfiles": {
+
+    "html": {
+
+    "inline_break": 1
+
+        }
+
+    }
 
 ## emmet
 -반복 *   
@@ -40,6 +50,7 @@ tags: [VScode , Extentions, Setting]
 -속성 [ ]   
 -텍스트(내용) { }   
 -넘버링 $   
+
 
 ex) div>div.user_id#user_id{내용}+(ul>li*2)+div[class="user_name" id="user_name"]{내용}+button.button\$*3{확인\$}   
 >![emmet실행결과](https://jinsu1.github.io/jinsubaji.github.io/assets/img/postImg/emmetResult.PNG)
