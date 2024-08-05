@@ -2,7 +2,7 @@
 layout: post
 title: Git
 date: 2024-08-01
-description: description # Add post description (optional)
+description: git # Add post description (optional)
 img: /postImg/git.png # Add image post (optional)
 fig-caption: caption # Add figcaption (optional)
 tags: [git, guide]
@@ -35,7 +35,7 @@ $ ssh-keygen -t ed25519 -C "leekh4232@gmail.com"
 -git push origin main   
 -git push -u origin main(-u옵션 : 최초 입력 이후 origin main을 자동으로 등록해 이후에 git push만 입력해도됨)
 > -u == --force --set-upstream 축약형인가?
-> 
+
 -git push -f origin main(-f옵션 : 리포내용과 관계없이 내 프로젝트를 강제로 업로드함. 팀원이 있을 경우 팀원이 푸쉬할 때 충돌이 발생할 수 있으니 개인이나 꼭 필요한 상황에만 사용)   
 -git pull origin main
  
