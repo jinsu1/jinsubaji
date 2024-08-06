@@ -49,3 +49,6 @@ tags: [jekyll ,ruby, blog, git, markdown]
 ### error 
 -LF will be replaced by CRLF the next time Git touches it   
  => git config --global core.autocrlf true   
+
+-ruby block in replace_bin_path   
+=> gemfile 위치에서 gem bundler install (버전 업그레이드)
