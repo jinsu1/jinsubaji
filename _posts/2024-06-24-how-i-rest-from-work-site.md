@@ -19,7 +19,10 @@ tags: [font, img, icon, etc]
 ### reperence
 -GDWeb
 -pinterest
+-rwdb.kr
 
 ### HTML, CSS, javascript
 -MDN
 -w3school
+
+https://store.sony.co.kr/

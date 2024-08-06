@@ -1146,7 +1146,7 @@ footer .copyright {
 }
 
 .post .post-content .post-title a {
-  font-family: 'NanumGothic';
+  font-family: 'NanumGothic', serif;
   text-decoration: none;
   color: #263959;
 }
