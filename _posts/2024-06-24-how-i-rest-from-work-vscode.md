@@ -54,4 +54,4 @@ tags: [VScode , Extentions, Setting]
 
 
 ex) div>div.user_id#user_id{내용}+(ul>li*2)+div[class="user_name" id="user_name"]{내용}+button.button\$*3{확인\$}   
->![emmet실행결과](https://jinsu1.github.io/jinsubaji.github.io/assets/img/postImg/emmetResult.PNG)   
+>![emmet실행결과](https://jinsu1.github.io/jinsubaji/assets/img/postImg/emmetResult.PNG)   

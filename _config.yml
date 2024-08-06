@@ -1,8 +1,8 @@
 title: jinsu's note
 description: > # this means to ignore newlines until "baseurl:"
 permalink: ':title/'
-baseurl: "/jinsubaji.github.io/" # the subpath of your site, e.g. /blog
-url: "https://jinsu1.github.io/jinsubaji.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/jinsubaji/" # the subpath of your site, e.g. /blog
+url: "https://jinsu1.github.io/jinsubaji/" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings

@@ -182,7 +182,7 @@ var SubSwiper = new Swiper('.sub_swiper .swiper-container', {
 MainSwiper.controller.control = SubSwiper;
 SubSwiper.controller.control = MainSwiper;
 ```
-
+>출처 https://lpla.tistory.com/104
 ### error
 
 - loop속성을 사용하면 swipe가 작동하지않음
