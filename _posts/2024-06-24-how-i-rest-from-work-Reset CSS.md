@@ -3,7 +3,7 @@ layout: post
 title: Reset & Nomalize CSS
 date: 2024-08-05
 description: css reset & nomalize # Add post description (optional)
-img: /postImg/reset.PNG # Add image post (optional)
+img: /postImg/reset.jpg # Add image post (optional)
 fig-caption: caption # Add figcaption (optional)
 tags: [reset , nomalize, css, cdn]
 ---
