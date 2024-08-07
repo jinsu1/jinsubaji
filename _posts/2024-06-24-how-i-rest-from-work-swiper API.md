@@ -183,7 +183,16 @@ MainSwiper.controller.control = SubSwiper;
 SubSwiper.controller.control = MainSwiper;
 ```
 >출처 https://lpla.tistory.com/104
-### error
 
-- loop속성을 사용하면 swipe가 작동하지않음
-> 상단에 let loop_slider = ture를 선언하고 loop:loop_slider 속성을 넣으니 동작함
+
+### error
+-mainSlide와 subSlide가 같이 움직이나 첫번째 슬라이드 움직일 때 다른 쪽이 두 개씩 움직이거나 다른 슬라이드가 반 걸치는 등 부자연스러움 각 슬라이드 수를 받아올 수 있도록 함   
+```javascript
+var swiperTopNum = $('.main-slide').find('.swiper-slide');
+var swiperSubNum = $('.sub-slide').find('.sub-slide');
+
+mainSwiper 속성에 추가 => loopedSlides: swiperTopNum.length
+subSwiper 속성에 추가 => loopedSlides: swiperSubNum.length
+```
+
+>출처 https://somv12.tistory.com/8

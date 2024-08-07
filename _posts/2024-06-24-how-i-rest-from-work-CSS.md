@@ -9,14 +9,14 @@ tags: [css, css3]
 ---
 ## CSS
 
-### 구체성단위
+### 1. 구체성단위
 -CSS는 점수가 같다면 더 아래에 입력한 스타일이 먹지만 점수가 다르다면 점수가 큰 쪽의 스타일이 적용된다.
  - id: 100점   
  - class: 10점   
  - tag: 1점   
  > ex) #container .div span => 111점
 
-### 계층선택자
+### 2. 계층선택자
 
 #### html
 ```html
@@ -40,3 +40,101 @@ tags: [css, css3]
 -css에서 부모선택자의 속성을 주고 그 부모선택자의 자식을 선언해야할 경우 부모선택자의 중괄호 안에서 선언할 수 있음   
 
 -class="content red"의 경우 .content.red{}로 선언할 수도 있지만 위 코드와 같이 &를 붙이면 .content안에서도 선언할 수있음. &를 붙이지 않으면 .content의 동급이아닌 자식 중에 .red를 찾음 &:hover, &:active, &:after 등에 많이 사용
+
+### 3. attachment 속성
+
+- fixed
+
+-뷰포트에 배경을 고정하여 스크롤해도 배경은 움직이지 않음 이미지를 css내에서 background-image 속성을 이용해서 넣어야 적용할 수 있음  
+
+-3개의 section이있고 header와 footer에 배경이미지를 넣음
+> 배경과 콘텐츠를 같이 고정할 방법은 없을까? footer에 쓰고싶다. 4번으로 가면 할 순 있다.
+
+#### html
+```html
+<div class="header"></div>
+<div class="section num1"></div>
+<div class="section num2"></div>
+<div class="section num3"></div>
+<div class="footer"></div>
+```
+#### css
+```css
+body {
+    padding: 0;
+    margin: 0;
+    }
+
+    .section {
+    height: 968px;
+
+        &.num1 {
+            background-color: yellow;
+        }
+
+        &.num2 {
+            background-color: blue;
+        }
+
+        &.num3 {
+            background-color: lightblue;
+        }
+    }
+
+    .header, .footer {
+        height: 500px;
+    }
+
+    .header {
+        background-image:url(img/bg1.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .footer {
+        background-image:url(img/bg2.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+```   
+
+### 4. 접근성을 위한 편법?
+-배경이미지에 텍스트를 포함한 이미지롤 넣고 싶은데 text를 안넣으면 접근성 때문에 웹표준에 맞지않는다. 
+> text-indent: -10000px;   
+
+를 이용해서 텍스트를 화면 밖으로 날려버리면 음성이 텍스트를 읽으면서 접근성이 해결되면서 원하는 이미지를 넣을 수 있다.   
+
+-이미지저장을 막고싶을 대 이미지를 배경으로 넣으면 오른쪽클릭으로 이미지를 저장할 수 없지만 개발자모드에서는 저장할 수 있다.   
+
+-모바일, 테블릿 등에서 a태그에 배경이미지 repeat을 사용하고 display:block 을 사용해서 배경이 차지할 너비를 먹고 텍스트는 날려버리면 반응형으로 만들지않아도 반응형처럼 보일 수 있다 물론 배경만 repeat하고 list는 no-repeat하고 왼쪽 고정.   
+
+-가로반복은 1px만 있어도 되지만 세로반복은 높이를 맞춘 이미지를 가져와야한다.
+
+#### html
+```html
+<nav class="navi">
+    <a href="#">웹표준/웹디자인</a>
+    <a href="#">소셜미디어마케팅</a>
+    <a href="#">IT/모바일</a>
+    <a href="#">QA</a>
+</nav>
+```
+#### css
+```css
+.navi {
+        background: url(img/list_right.png) repeat-y right top,
+                    url(img/menu.png) no-repeat left top,
+                    url(img/list_bg.png) repeat;
+
+        a{
+            display:block;
+            width:auto;
+            height:45px;
+            text-indent: -10000px;
+        }
+    }
+```
