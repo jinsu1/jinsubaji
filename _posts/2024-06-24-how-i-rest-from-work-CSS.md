@@ -43,12 +43,12 @@ tags: [css, css3]
 
 ### 3. attachment 속성
 
-- fixed
+-fixed
 
 -뷰포트에 배경을 고정하여 스크롤해도 배경은 움직이지 않음 이미지를 css내에서 background-image 속성을 이용해서 넣어야 적용할 수 있음  
 
 -3개의 section이있고 header와 footer에 배경이미지를 넣음
-> 배경과 콘텐츠를 같이 고정할 방법은 없을까? footer에 쓰고싶다. 4번으로 가면 할 순 있다.
+
 
 #### html
 ```html
@@ -138,3 +138,16 @@ body {
         }
     }
 ```
+
+### aspect-ratio 속성
+
+-aspect-ratio를 이용하여 width / height 비율을 지정할 수 있다.
+1/3이라고 지정하면, 너비는 1, 높이는 3의 비율을 가지게 된다.
+
+```css
+width: 100px;
+aspect-ratio: 1 / 3;
+```
+
+-이미지 깨짐을 방지하면서 종횡비를 지정하고 싶다면, object-fit 속성을 같이 써보자
+img의 부모에 aspect-ratio를 지정하고, img에 object-fit: cover를 하면 이미지가 깨지지 않으면서 원하는 종횡비로 지정할 수 있다.
