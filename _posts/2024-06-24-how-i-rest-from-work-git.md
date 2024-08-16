@@ -27,8 +27,8 @@ $ ssh-keygen -t ed25519 -C "본인메일@gmail.com"
 -git config --global --unset user.name(전역으로 설정된 config 삭제)   
 -git config --global --unset user.email   
 -git init (깃허브에서 리포를 만들어 clone하지않고 컴퓨터에서 작업을 먼저 시작했을 때 저장소를 생성한다.)   
--git clone 리포주소
--git branch -M main   
+-git clone 리포주소   
+-git branch -M main     
 -git add .   
 -git commit -m '커밋내용'   
 -git remote add origin 리포주소  

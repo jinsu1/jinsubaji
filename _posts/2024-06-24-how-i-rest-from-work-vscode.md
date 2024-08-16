@@ -24,6 +24,8 @@ tags: [VScode , Extentions, Setting]
 -git history   
 -color highlight
 -highlight machingTag
+-Eslint (cmd 사용자경로에서 npm install -g eslint 수행 필요)
+-Code Runner (환경설정에서 Code-runner: Clear Previous Output)
 
 ## setting
 

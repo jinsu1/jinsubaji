@@ -70,7 +70,7 @@ int main() {
 }
 ```
 ### 실행결과
-![result]({{site.baseurl}}/assets/img/postImg/array1.PNG)
+![result](/assets/img/postImg/array1.PNG)
 
 ### Array_2
 ```c
@@ -107,6 +107,6 @@ int main() {
 }
 ```
 ### 실행결과
-![result]({{site.baseurl}}/assets/img/postImg/array2.PNG)
+![result](/assets/img/postImg/array2.PNG)
 
 
