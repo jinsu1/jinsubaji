@@ -8,6 +8,7 @@ fig-caption: caption # Add figcaption (optional)
 tags: [javascript]
 ---
 ## javacript
+[Javascript 시작하기.pdf](https://github.com/user-attachments/files/16631995/Javascript.pdf)   
 
 ### Extentions
 -ESLint(Javascript 구문 검사 기능)   
@@ -92,5 +93,30 @@ for(let i=0; i < data.length -1; i++) {
 }
 console.log(data);
 ```
+[배열 연습문제 14문제](https://github.com/user-attachments/files/16688963/_._compressed.pdf)   
+[배열 연습문제 풀이](https://github.com/user-attachments/files/16688844/javascript_06_array.pdf)
 
-[Javascript 시작하기.pdf](https://github.com/user-attachments/files/16631995/Javascript.pdf)
+
+### JSON
+
+-key값의 데이터에 배열 또는 JSON을 넣을 수 있다.
+```javascript
+const json1 = { ... };
+const json2 = { ... };
+const json3 = {
+ data1: json1,
+ data2: json2
+};
+```
+-위 코드처럼 참조하지 않고 직접 할당도 가능하다.
+```javascript
+const myjson = {
+ data1: {
+ ...
+ },
+ data2: {
+ ...
+ }
+};
+
+```
