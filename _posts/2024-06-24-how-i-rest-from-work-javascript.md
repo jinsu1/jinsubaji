@@ -31,6 +31,7 @@ const [a, b, c] = myArr
 ```
 > 배열의 원소가 각 const a, b, c의 변수에 순서대로 저장된다.
 
+
 ```javascript
 let myArr = [100, 200, 300, 1, 2, 3, 4];
 const [a, b, ...c];
