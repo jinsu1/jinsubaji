@@ -10,19 +10,19 @@ tags: [font, img, icon, etc]
 ## Avaliable Site
 
 ### font, icon, img
--google fonts
+-google fonts   
 -fontAwesome
 
 ### color
 -color picker
 
 ### reperence
--GDWeb
--pinterest
--rwdb.kr
+-GDWeb  
+-pinterest  
+-rwdb.kr  
 
 ### HTML, CSS, javascript
--MDN
+-MDN  
 -w3school
 
 https://store.sony.co.kr/

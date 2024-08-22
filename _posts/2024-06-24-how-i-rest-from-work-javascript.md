@@ -120,3 +120,131 @@ const myjson = {
 };
 
 ```
+-JSON 데이터 추가 및 수정
+
+1) 방법1 : 한 가지의 키 값을 추가 할 때 이용
+
+```javascript
+const foo = {
+    name: "자바스크립트",
+    age: 19
+};
+
+foo.email = "hello@world.com";
+console.log(foo);
+```
+
+2) 방법2 : 여러 개의 키 값과 데이터를 입력할 때 이용
+
+
+```javascript
+let origin = {name: 'javascript', age: 25};
+origin = {...origin, gender: 'M'};
+console.log(origin);
+
+const newdata2 = {...origin, age: 30, gender: 'F'};
+console.log(newdata2);
+```
+>...변수명을 통해 기존 json의 데이터를 불러오고 key를 추가할 수 있다. 불러오지않고하면 전의 내용을 덮어씌워 사라져버리니 주의 할 것. 새로운 변수명에 데이터를 추가해서 저장하는 것도 가능
+
+-참조복사와 일반복사   
+
+```javascript
+let a = 100;
+let b = a;
+console.log(`a= ${a}, b= ${b}`);
+
+a++;
+console.log(`a= ${a}, b=${b}`);
+```
+>일반복사는 a는 수정되어도 b까지 수정되지 않지만 배열과 json은 복사한 쪽과 원본 둘 중 하나라도 수정하면 둘 다 수정된다.
+
+-옵셔널체이닝
+
+```javascript
+const user = { name: "박진수"};
+console.log(user?.name?.age);
+```
+>if문의 축양형. user가있다면? user.name출력. 그것도 있다면? user.name.age를 출력 (한 칸의 자식요소까지 없다면 undefined를 출력하지만 두 칸의 자식요소가 없다면 에러가 발생)
+
+### 함수
+-x 부분을 매개변수 => 파라미터(parameter or params)라고 한다
+
+```javascript
+function (x) {}
+```
+
+-return은 함수호출자리에 반환하는 값이다. return하지않으면 함수가 진행되고 아무값도 반환되지않고 지나간다.
+
+-화살표 함수(함수의 축약형)
+```javascript
+//let e = (x) => {} 
+//let e = function (x) {}
+
+const foo = (x) => {
+    for(let i=0; i<x; i++) {
+        console.log("hello world");
+    }
+};
+
+foo(7);
+
+const bar = x => {
+    for(let i=0; i<x; i++) {
+        console.log("hello");
+    }
+};
+
+bar(3);
+
+const hello = (x, y) => x+y;
+// const hello = (x, y) => {
+//      return x+y;
+// }
+console.log(hello(100,200));
+```
+> 파라미터가 한 개 일 때 소괄호를 생략가능하고 처리 로직이 한 줄일 경우 return도 생략가능하다.
+
+-콜백함수(파라미터에 함수명을 넣어 함수명(pram, pram)을 만드는 구조로 또 다른 함수를 호출하여 연산결과를 리턴값으로 받아온다. => 함수 안의 함수)
+
+```javascript
+function something(x, y, cb) {
+    const result = cb(x, y);
+    console.log(cb);
+    console.log(`${x}와${y}의 연산 결과는 ${result}`);
+}
+
+function plus(a,b) {
+    return a+b;
+}
+
+let minus = (a, b) => a-b;
+
+something(100, 50, plus);
+something(100, 50, minus);
+console.log(plus);
+
+```
+> 함수명을 출력하면 [Function: plus] 이런식으로 출력됨.
+
+-익명함수 형태의 콜백함수
+
+```javascript
+something(200, 100, function(a, b) {
+    return a * b;
+});
+
+
+something(5, 7, (a, b) => {
+    for(let i=a; i<b; i++) {
+     return i*7;
+    }
+
+});
+
+something(5, 7, (a, b) => {
+    return a + b;
+});
+
+something(5, 7, (a, b) => a + b );
+```
