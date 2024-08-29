@@ -247,4 +247,48 @@ something(5, 7, (a, b) => {
 });
 
 something(5, 7, (a, b) => a + b );
+
+------------------------------------
+function something(x, y, cb) {
+    const result = cb(x, y);
+    cb(x, y);
+}
+
+something(5, 7, (a, b) => {
+    for(let i=a; i<b; i++) {
+      console.log(`7 x ${i} = ${i*7}`);
+    }
+    return 1;
+});
+
 ```
+
+### Event
+-keyEvent를 사용할 때에는 keyup을 주로 사용
+> keypress는 한글이나 특수키에 반응을 안하고 x, keydown은 중복실행 위험성이 있음
+
+-keyCode값을 이용하여 특정 키에대한 이벤트를 실행할 수 있다.   
+[keyCode 표 보기](https://blog.munilive.com/posts/keyboard-keycode-value.html)   
+
+-scroll event
+1) window.scrollY: 현재 화면의 최상단 y좌표 값
+2) window.screen.availHeight: 현재 보고있는 화면의 y좌표 길이
+3) document.body.scrollHeight: 현재 페이지의 전체 길이
+
+-클릭 시 클래스 추가, 삭제 이벤트 (단일)
+```javascript
+document.querySelector(".btn").addEventListener("click", (e) => {
+    if(!(e.currentTarget.classList.contains("active"))) {
+        e.currentTarget.classList.add("active");
+    } else {
+        e.currentTarget.classList.remove("active");
+    }
+});
+```
+> e.currentTarget은 이벤트가 발생한 개체를 의미  
+
+-객체.dataset.이름 = "값";로 data-이름 속성을 html태그에 넣을 수 있음
+```javascript
+
+```
+

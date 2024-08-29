@@ -151,3 +151,5 @@ aspect-ratio: 1 / 3;
 
 -이미지 깨짐을 방지하면서 종횡비를 지정하고 싶다면, object-fit 속성을 같이 써보자
 img의 부모에 aspect-ratio를 지정하고, img에 object-fit: cover를 하면 이미지가 깨지지 않으면서 원하는 종횡비로 지정할 수 있다.
+
+-inherit은 부모것을 상속한다는 의미   
