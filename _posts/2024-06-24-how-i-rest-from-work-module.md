@@ -7,7 +7,7 @@ img: /postImg/javascript.jpeg # Add image post (optional)
 fig-caption: Module for javascript # Add figcaption (optional)
 tags: [javascript, css, html, tab, menu, dropdown, accordion]
 ---
-## TabMenu
+## <span style="color:#1E90FF; font-weight:bold;">TabMenu</span>
 
 ### HTML
 
@@ -125,8 +125,9 @@ document.querySelectorAll('.tab-button').forEach((v, i) => {
         });
     });
 ```
+<br>
 
-## Dropdown
+## <span style="color:#1E90FF; font-weight:bold;">Dropdown</span>
 
 ### HTML
 ```html
@@ -241,8 +242,9 @@ document.querySelectorAll('.menu-item').forEach((v, i) => {
     });
 });
 ```
+<br>
 
-## accordion
+## <span style="color:#1E90FF; font-weight:bold;">Accordion</span>
 
 ### HTML
 
@@ -325,3 +327,119 @@ document.querySelectorAll('.menu-item').forEach((v, i) => {
     });
 });
 ```
+<br>
+
+## <span style="color:#1E90FF; font-weight:bold;">주민번호</span>
+
+### HTML
+
+-앞자리는 6자까지만 입력가능, 앞자리 모두 입력 후 뒷자리 입력 칸으로 focus
+
+```html
+<form id="myform">
+    <h3>주민번호를 입력하세요.</h3>
+    <input type="text"  name="jumin1" id="jumin1" class="jumin" />
+    ---
+    <input type="password"  name="jumin2" id="jumin2" class="jumin" />
+</form>
+```
+
+```javascript
+document.querySelectorAll(".jumin").forEach((v, i) => {
+    v.addEventListener("focus", e => {
+        e.currentTarget.style.backgroundColor = '#006';
+        e.currentTarget.style.color = '#fff';
+    });
+
+    v.addEventListener("blur", e => {
+        e.currentTarget.style.backgroundColor = '#fff';
+        e.currentTarget.style.color = "#000";
+    });
+});
+
+document.querySelector("#jumin1").addEventListener('keyup', e => {
+    const value = e.currentTarget.value;
+
+    if(value.length >= 6) {
+        e.currentTarget.value = value.substring(0, 6);
+        document.querySelector("#jumin2").focus();
+    }
+});
+```
+<br>
+
+## <span style="color:#1E90FF; font-weight:bold;">팝업창 띄우기</span>
+
+-window.open('주소', '창이름', '속성'); 으로 구성 속성은 대부분 공통으로 들어간다.
+-팝업창이름을 같게하면 같은 창을 재활용한다.
+-interval에 창 띄우기를 적용하면 설정한 시간마다 창을 띄울 수 있다.
+
+```javascript
+document.querySelector('#link3').addEventListener('click', e =>  {
+    e.preventDefault();
+
+    window.open('https://www.naver.com', 'mypop', 'width=500, height=500, scrollbars=no, toolbar=no, menubar=no, status=no');
+});
+```
+<br>
+
+## <span style="color:#1E90FF; font-weight:bold;">웹 브라우저, 모바일 식별</span>
+
+```html
+
+<h1 id="browser"></h1>
+<h1 id="mobile"></h1>
+
+<script>
+    function getWebBrowserName() {
+        //전부 소문자로 변경해야 용이함
+        //uset Agent == HTTP 요청을 보내는 디바이스와 브라우저 등 사용자 소프트웨어의 식별 정보
+        let agt = navigator.userAgent.toLowerCase();
+
+        //indexOf는 해당 문자열이 있는 위치의 시작점을 반환하며 없으면 -1을 반환
+        if(agt.indexOf('edge') != -1) {
+            return 'Edge';
+        } else if (agt.indexOf('chrome') != -1) {
+            return 'Chrome';
+        } else if (agt.indexOf('netscape') != -1 ) {
+            return 'Netscape';
+        } else {
+            return 'Unknown';
+        }
+    }
+
+    function isMobile() {
+        let tmpUser = navigator.userAgent.toLowerCase();
+        let isMobile = false;
+
+        if(tmpUser.indexOf("iphone") > -1 || tmpUser.indexOf("ipad") > -1 || tmpUser.indexOf("ipod") >  -1 || tmpUser.indexOf("android") > -1) {
+            isMobile = true;
+        }
+
+        return isMobile;
+    }
+
+    document.getElementById("browser").innerHTML = getWebBrowserName();
+    document.getElementById("mobile").innerHTML = isMobile();
+</script>
+```
+<br>
+
+## <span style="color:#1E90FF; font-weight:bold;">이전 페이지 이동</span>
+
+```javascript
+document.querySelector("#link1").addEventListner('click', e => {
+    e.preventDefault();
+    history.back(); // history.forward();
+});
+```
+<br>
+
+## <span style="color:#1E90FF; font-weight:bold;">페이지 이동</span>
+
+```javascript
+location.href = 'https://www.naver.com'; // 페이지 및 파일 이동
+location.reload(); // 페이지 새로고침
+```
+
+<br>

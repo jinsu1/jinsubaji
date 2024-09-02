@@ -288,7 +288,159 @@ document.querySelector(".btn").addEventListener("click", (e) => {
 > e.currentTarget은 이벤트가 발생한 개체를 의미  
 
 -객체.dataset.이름 = "값";로 data-이름 속성을 html태그에 넣을 수 있음
-```javascript
+
+### 
+
+정리해 습새야
 
 ```
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0 15px;
+        }
 
+        .gnb {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+
+            li:after {
+                    content: "|";
+                    padding: 0 7px;
+                    color: #ccc;
+            }
+            
+            li:last-child:after {
+                content:"";
+            }
+
+            a {
+                font-size: 20px;
+                text-decoration: none;
+                padding-bottom: 3px;
+                color: #222;
+
+                &:hover {
+                    color: #22b8cf;
+                }
+
+                &.active{
+                    border-bottom: 3px solid #22b8cf;
+                    color: #22b8cf;
+                }
+            }        
+        }
+
+        .container {
+            display:flex;
+
+            .item {
+                flex: 1;
+                box-sizing: border-box;
+                padding: 10px 5px;
+                text-align: center;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Webtoon</h1>
+
+    <ul class="gnb">
+        <li>
+            <a href="07-webtoon.html?weekday=mon" data-weekday="mon">월요웹툰</a>
+        </li>
+        <li>
+            <a href="07-webtoon.html?weekday=tue" data-weekday="tue">화요웹툰</a>
+        </li>
+        <li>
+            <a href="07-webtoon.html?weekday=wed" data-weekday="wed">수요웹툰</a>
+        </li>
+        <li>
+            <a href="07-webtoon.html?weekday=thu" data-weekday="thu">목요웹툰</a>
+        </li>
+        <li>
+            <a href="07-webtoon.html?weekday=fri" data-weekday="fri">금요웹툰</a>
+        </li>
+        <li>
+            <a href="07-webtoon.html?weekday=sat" data-weekday="sat">토요웹툰</a>
+        </li>
+        <li>
+            <a href="07-webtoon.html?weekday=sun" data-weekday="sun">일요웹툰</a>
+        </li>
+    </ul>
+
+    <div class="container"></div>
+
+    <script src="./data.js"></script>
+    <script>
+        console.group("데이터 확인");
+        console.log(webtoon);
+        console.groupEnd();
+
+        //querystring을 객체로 변환
+        const weekdayData = new URLSearchParams(location.search);
+
+        //생성된 객체를 JSON으로 변환
+        const { weekday } = Object.fromEntries(weekdayData);
+        /*
+        const weekday = {mon: [...]}
+        */
+        const webtoonData = Object.fromEntries(weekdayData);
+        console.log(`weekday: ${weekday}`)
+        console.log(`webtoonData: ${webtoonData}`);
+
+        document.querySelectorAll('.gnb a').forEach((v, i) => {
+            console.log(`v.dataset.weekday: ${v.dataset.weekday}`);
+            if( v.dataset.weekday == weekday ) {
+                v.classList.add('active');
+            } else {
+                v.classList.remove('active');
+            }
+        });
+
+        const container = document.querySelector('.container');
+
+        const currentList = webtoon[weekday];
+
+        if (currentList) {
+            currentList.forEach((v, i) => {
+                const item = document.createElement("div");
+                item.classList.add("item");
+
+                const img = document.createElement("img");
+                img.setAttribute("src", `img/${v.thumbnail}`);
+                item.appendChild(img);
+
+                const title = document.createElement("h3");
+                title.innerHTML = v.title;
+                item.appendChild(title);
+
+                const author = document.createElement("p");
+                author.innerHTML = v.author;
+                item.appendChild(author);
+
+                const point = document.createElement("p");
+                point.innerHTML = v.point;
+                item.appendChild(point);
+
+                console.log(item);
+
+                container.appendChild(item);
+            });
+        }
+
+        
+    </script>
+</body>
+</html>
+
+```
