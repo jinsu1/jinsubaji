@@ -7,7 +7,7 @@ img: /postImg/javascript.jpeg # Add image post (optional)
 fig-caption: Module for javascript # Add figcaption (optional)
 tags: [javascript, css, html, tab, menu, dropdown, accordion]
 ---
-## <span style="color:#1E90FF; font-weight:bold;">TabMenu</span>
+## <span style="color:#1E90FF; font-weight:bold;">TabMenu - CSS(노가다 버전)</span>
 
 ### HTML
 
@@ -126,6 +126,220 @@ document.querySelectorAll('.tab-button').forEach((v, i) => {
     });
 ```
 <br>
+
+## <span style="color:#1E90FF; font-weight:bold;">TabMenu - javascript(자동화 버전)</span>
+
+### HTML
+
+```html
+<h1>Webtoon</h1>
+
+<ul class="gnb">
+    <li>
+        <a href="07-webtoon.html?weekday=mon" data-weekday="mon">월요웹툰</a>
+    </li>
+    <li>
+        <a href="07-webtoon.html?weekday=tue" data-weekday="tue">화요웹툰</a>
+    </li>
+    <li>
+        <a href="07-webtoon.html?weekday=wed" data-weekday="wed">수요웹툰</a>
+    </li>
+    <li>
+        <a href="07-webtoon.html?weekday=thu" data-weekday="thu">목요웹툰</a>
+    </li>
+    <li>
+        <a href="07-webtoon.html?weekday=fri" data-weekday="fri">금요웹툰</a>
+    </li>
+    <li>
+        <a href="07-webtoon.html?weekday=sat" data-weekday="sat">토요웹툰</a>
+    </li>
+    <li>
+        <a href="07-webtoon.html?weekday=sun" data-weekday="sun">일요웹툰</a>
+    </li>
+</ul>
+
+<div class="container"></div>
+```
+
+### CSS
+
+```css
+body {
+        padding: 0 15px;
+    }
+
+    .gnb {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        li:after {
+                content: "|";
+                padding: 0 7px;
+                color: #ccc;
+        }
+        
+        li:last-child:after {
+            content:"";
+        }
+
+        a {
+            font-size: 20px;
+            text-decoration: none;
+            padding-bottom: 3px;
+            color: #222;
+
+            &:hover {
+                color: #22b8cf;
+            }
+
+            &.active{
+                border-bottom: 3px solid #22b8cf;
+                color: #22b8cf;
+            }
+        }        
+    }
+
+    .container {
+        display:flex;
+
+        .item {
+            flex: 1;
+            box-sizing: border-box;
+            padding: 10px 5px;
+            text-align: center;
+            margin: 10px;
+        }
+    }
+```
+
+### Javascript
+
+-data.js
+
+```javascript
+const webtoon = {
+    mon: [
+        {
+            title: "참교육",
+            author: "채용택/한가람",
+            point: 9.86,
+            thumbnail: "mon1.jpg"
+        },
+        {
+            title: "뷰티풀 군바리",
+            author: "설이/윤성원",
+            point: 9.81,
+            thumbnail: "mon2.jpg"
+        },
+        {
+            title: "퀘스트지상주의",
+            author: "박태준 만화회사",
+            point: 9.79,
+            thumbnail: "mon3.jpg"
+        }
+    ],
+
+    tue: [
+        {
+            title: "김부장",
+            author: "박태준 만화회사/정종택",
+            point: 9.19,
+            thumbnail: "tue1.jpg"
+        },
+        {
+            title: "여신강림",
+            author: "야옹이",
+            point: 9.38,
+            thumbnail: "tue2.jpg"
+        },
+        {
+            title: "대학원 탈출일지",
+            author: "요다",
+            point: 9.98,
+            thumbnail: "tue3.jpg"
+        }
+    ],
+
+    wed: [
+        {
+            title: "내 남편과 결혼해줘",
+            author: "LICO / 성소작",
+            point: 9.95,
+            thumbnail: "wed1.jpg"
+        },
+        {
+            title: "전지적 독자 시점",
+            author: "UMI / 슬리피-C",
+            point: 9.95,
+            thumbnail: "wed2.jpg"
+        },
+        {
+            title: "조조코믹스",
+            author: "이동건",
+            point: 9.97,
+            thumbnail: "wed3.jpg"
+        }
+    ]
+};
+```
+
+```javascript
+<script src="./data.js"></script>
+
+//querystring을 객체로 변환 => querystring = "weekday=mon"
+//const query = new URLSearchParams(location.search); => "weekday=mon" => const query = { weekday : "mon" }
+
+//생성된 객체를 JSON으로 변환 => weekday=mon => const weekday = { "weekday" : "mon" }; 
+
+const weekday  = Object.fromEntries(new URLSearchParams(location.search)).weekday;
+//const { weekday } = Object.fromEntries(query);
+
+document.querySelectorAll('.gnb a').forEach((v, i) => {
+    console.log(`v.dataset.weekday: ${v.dataset.weekday}`);
+    if( v.dataset.weekday == weekday ) {
+        v.classList.add('active');
+    } else {
+        v.classList.remove('active');
+    }
+});
+
+const container = document.querySelector('.container');
+
+const currentList = webtoon[weekday];
+
+if (currentList) {
+    currentList.forEach((v, i) => {
+        const item = document.createElement("div");
+        item.classList.add("item");
+
+        const img = document.createElement("img");
+        img.setAttribute("src", `img/${v.thumbnail}`);
+        item.appendChild(img);
+
+        const title = document.createElement("h3");
+        title.innerHTML = v.title;
+        item.appendChild(title);
+
+        const author = document.createElement("p");
+        author.innerHTML = v.author;
+        item.appendChild(author);
+
+        const point = document.createElement("p");
+        point.innerHTML = v.point;
+        item.appendChild(point);
+
+        console.log(item);
+
+        container.appendChild(item);
+    });
+}
+```
+
+
+<br>
+
 
 ## <span style="color:#1E90FF; font-weight:bold;">Dropdown</span>
 
