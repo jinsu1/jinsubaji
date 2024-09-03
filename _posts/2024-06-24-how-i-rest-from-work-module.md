@@ -657,3 +657,90 @@ location.reload(); // 페이지 새로고침
 ```
 
 <br>
+
+## <span style="color:#1E90FF; font-weight:bold;">팝업창 - javascript</span>
+
+
+### HTML
+```html
+<h1>팝업창 열기</h1>
+
+<div class="popup">
+    <h2>팝업 입니다.</h2>
+    <hr />
+    <label>
+        <input type="checkbox" id="no-open" value="Y" />
+        15초간 이 창을 열지 않음
+    </label>
+    <button type="button" id="close-popup">닫기</button>
+</div>
+```
+### CSS
+
+```css
+.popup {
+    border: 1px solid black;
+    background-color: #eee;
+    box-shadow: 0 0 10px #000;
+    padding: 15px;
+    position: absolute;
+    width: 280px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999;
+
+    display: none;
+}
+```
+
+### Javascript
+
+```javascript
+const getCookie = (name) => {
+    const regex = new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)|[|]\\\/\+^])/g, "\\$1") + "=([^;]*)");
+
+    let matches = document.cookie.match(regex);
+
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+};
+
+const setCookie = (name, value, maxAge) => {
+    const encName = encodeURIComponent(name);
+    const encValue = encodeURIComponent(value);
+    let updatedCookie = `${encName}=${encValue};`;
+
+    //유효경로 설정
+    updatedCookie += "path=/;";
+    //updatedCookie = "domain=.naver.com" 쿠키 전역 설정
+
+    //유효시간은 파라미터가 전달된 경우만 설정
+    //파라미터가 전달 안된 경우 설정되지 않기 때문에 브라우저를 닫기 전까지 유지
+    if(maxAge !== undefined) {
+        updatedCookie += `max-age=${maxAge}`;
+    }
+
+    //저장
+    document.cookie = updatedCookie;
+    
+};
+
+//쿠키가 저장되어 있지 않다면 레이어 팝업을 화면에 표시함
+// --> 쿠키가 저장되어 있다면 if문을 건너뛰므로 팝업을 표시하지 않음
+if (!getCookie("no-popup")) {
+    document.querySelector(".popup").style.display = "block";
+}
+
+//닫기 버튼 이벤트
+document.querySelector("#close-popup").addEventListener('click', e => {
+    document.querySelector(".popup").style.display = "none";
+
+    //체크가 되었다면 쿠키를 생성 -> 새로고침되었을 때 47라인의 코드가 실행되지 않음
+    if(document.querySelector("#no-open").checked) {
+        setCookie("no-popup", "Y", 15);
+        //오늘 하루 이 창 열지 않음인 경우 24시간으로 설정
+        //setCookie("nopopup", "Y", 60*60*24);
+    }
+});
+```
