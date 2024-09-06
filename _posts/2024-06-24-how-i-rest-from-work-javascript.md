@@ -291,4 +291,7 @@ document.querySelector(".btn").addEventListener("click", (e) => {
 ```
 > e.currentTarget은 이벤트가 발생한 개체를 의미  
 
--name.dataset.이름 = "값";로 data-이름 속성을 html태그에 넣을 수 있음
+-name.dataset.이름 = "값";로 data-이름 속성을 html태그에 읽거나 수정, 삽입할 수 있음
+> name.이름.value로  접근할 수 있는건 json이고 html태그의 data-속성에 접근하려면 dataset을 꼭 해야함 너 헷갈려 하더라   
+
+
