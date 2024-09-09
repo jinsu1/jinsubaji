@@ -11,7 +11,8 @@ tags: [font, img, icon, etc]
 
 ### font, icon, img
 -google fonts   
--fontAwesome
+-fontAwesome   
+- chrome web store의image  downloader - imageye (화면의 이미지 전체 다운로드)
 
 ### color
 -color picker
@@ -25,4 +26,3 @@ tags: [font, img, icon, etc]
 -MDN  
 -w3school
 
-https://store.sony.co.kr/
