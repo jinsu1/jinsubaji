@@ -17,6 +17,8 @@ tags: [javascript ,signup]
 -전화번호 형식 확인   
 -radio, checkbox 선택 확인 및 최소, 최대 갯수 제한   
 
+### HTML
+
 ```html
 <form class="form-horizontal" name="join_form" id="join_form">
     <div class="field-container">
@@ -78,6 +80,7 @@ tags: [javascript ,signup]
     </div>
 </form>
 ```
+### CSS
 
 ```css
 .form-horizontal {
@@ -386,6 +389,7 @@ class RegexHelper {
 
 const regexHelper = new RegexHelper();
 ```
+<br />
 
 ```javascript
 <script src="js/RegexHelper.js"></script>

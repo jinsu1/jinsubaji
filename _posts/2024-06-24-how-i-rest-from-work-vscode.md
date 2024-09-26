@@ -26,7 +26,8 @@ tags: [VScode , Extentions, Setting]
 -highlight machingTag
 -Eslint (cmd 사용자경로에서 npm install -g eslint 수행 필요)
 -Code Runner (환경설정에서 Code-runner: Clear Previous Output)
--Thunder Client (api data 값 확인 => header에 key의 변수명, key code 입력 && query에 key, value입력), CRUD 사용 가능한 app (C(get, post), R(querystring), U(put), D(delete))
+-Thunder Client (api data 값 확인 => header에 key의 변수명, key code 입력 && query에 key, value입력), CRUD 사용 가능한 app (C(get, post), R(querystring), U(put), D(delete))   
+-code Generator for java (constructor using All field, getter and setter 커맨드 창에 입력시 자동 생성)   
 
 ## setting
 
