@@ -1481,6 +1481,11 @@ a.newer-posts:hover {
 }
 
 @media screen and (max-width: 991px) {
+    
+    .post{
+        max-height: 500px;
+    }
+    
     .page-image-box {
         height: 100%;
     }
