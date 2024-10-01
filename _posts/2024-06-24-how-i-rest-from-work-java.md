@@ -170,8 +170,18 @@ public class Ex02_File2 {
 -maven시작하기 [Gson(Maven).pdf](https://github.com/user-attachments/files/17161137/29-Gson.Maven.pdf)   
 
 ## Gradle(lombok)
--gradle시작하기 [Lombok(Gradle).pdf](https://github.com/user-attachments/files/17183113/30-Lombok.Gradle.pdf)
->maven repository 사이트에서 라이브러리 dependencies 복사
+-gradle시작하기 [Lombok(Gradle).pdf](https://github.com/user-attachments/files/17183113/30-Lombok.Gradle.pdf)   
+
+-java project 생성  
+-Gradle 선택    
+-저장할 폴더 생성   
+-프로젝트 이름 지정   
+-main>java>test 폴더 삭제해도 무방   
+-app.java package kr.jinsu.프로젝트명로 변경 후 ctrl + . 으로 Move 선택 -> app.java파일 이동 후 원래 있던 폴더 삭제   
+-build.gradle 자바버전 변경, dependences 추가할 것 추가   
+>maven repository 사이트에서 라이브러리 dependencies 복사   
+
+-jinsu폴더 안에 model, service, helper, exception 등 폴더 추가   
 
 ### Error
 -내가 설치한 자바버전에 문제가 없는데 버전오류가 뜬다면 build.gradle에서 아래 코드를 찾아 기본설정(21)값을 내 자바 버전으로 바꿔준다.   
