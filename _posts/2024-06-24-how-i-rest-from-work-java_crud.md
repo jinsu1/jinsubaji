@@ -9,6 +9,7 @@ tags: [java, create, read, update, delete, crud]
 ---
 
 # <span style="color:#616161; font-weight:bold;">JAVA CRUD</span>
+-json을 서버에 올리고 접근하기   
 
 ## <span style="color:#ffa59c; font-weight:bold;">Setting</span>
 -json파일 서버 업로드 및 .bat실행

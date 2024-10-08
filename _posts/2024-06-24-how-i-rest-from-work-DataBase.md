@@ -159,6 +159,7 @@ WHERE grade=(
     SELECT grade FROM student WHERE userid='jun123'
     );
 ```
+<br/>
 
 ```sql
 +--------+--------+-------+
@@ -182,6 +183,7 @@ WHERE deptno='101' AND weight < (
     SELECT AVG(weight) FROM student
 );
 ```
+<br/>
 
 ```sql
 +--------+--------+--------+
@@ -202,6 +204,7 @@ FROM student s, professor p, department d
 WHERE s.deptno=d.deptno AND s.deptno=(SELECT deptno FROM student WHERE name='이광훈') AND weight < (SELECT AVG(weight) FROM student
 ) AND s.profno=p.profno;
 ```
+<br/>
 
 ```sql
 SELECT s.name, s.weight, d.dname, p.name FROM student s
@@ -213,6 +216,8 @@ WHERE s.weight < (
         )
 );
 ```
+<br/>
+
 ```sql
 +--------+--------+----------------+--------+
 | name   | weight | dname          | name   |
@@ -232,6 +237,7 @@ WHERE s.weight < (
 ```sql
 insert into department values (103, '인터넷정보과', '공학관');
 ```
+<br/>
 
 ```sql
 +--------+----------------+--------+
@@ -251,6 +257,7 @@ insert into department values (103, '인터넷정보과', '공학관');
 ```sql
 update department set loc='5호관' where loc='공학관';
 ```
+<br/>
 
 ```sql
 +--------+----------------+-------+
@@ -269,3 +276,10 @@ update department set loc='5호관' where loc='공학관';
 ```sql
 delete from department where deptno > 300;
 ```
+
+
+## <span style="color:#ffa59c; font-weight:bold;">데이터베이스 설계</span>
+
+-1:N관계에서 N이 자식 1이 부모이고, workbench에서 ERD 관계 그릴 때 자식을먼저 선택하고 부모를 선택 해야한다.   
+
+-상위 테이블의 데이터를 삭제하려면 참조하는 하위 데이터를 먼저 지워야한다.   
