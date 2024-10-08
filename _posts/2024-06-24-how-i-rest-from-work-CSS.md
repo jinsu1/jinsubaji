@@ -153,3 +153,14 @@ aspect-ratio: 1 / 3;
 img의 부모에 aspect-ratio를 지정하고, img에 object-fit: cover를 하면 이미지가 깨지지 않으면서 원하는 종횡비로 지정할 수 있다.
 
 -inherit은 부모것을 상속한다는 의미   
+
+### -webkit-line-clamp 안먹을 때
+
+-아래 4줄이 셋트로 들어가야 먹는다.
+
+```css
+display:-webkit-box;
+-webkit-box-orient:vertical;
+overflow:hidden;
+-webkit-line-clamp:2;
+```

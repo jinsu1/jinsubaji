@@ -11,7 +11,7 @@ tags: [database, mysql, crud, setting]
 # <span style="color:#616161; font-weight:bold;">DataBase (MySQL)</span>
 
 ## <span style="color:#ffa59c; font-weight:bold;">Setting</span>
--Microsoft Visual C++ 설치 https://learn.microsoft.com/ko-kr/cpp/windows/latest-supported-vc-redist?view=msvc-170 에서 재배포 가능 패키지 버전 64bit를 설치힌다.      
+-Microsoft Visual C++ 설치 https://learn.microsoft.com/ko-kr/cpp/windows/latest-supported-vc-redist?view=msvc-170 에서 재배포 가능 패키지 버전 64bit를 설치한다.      
 
 -MySQL 설치 https://dev.mysql.com/downloads/mysql/   
 

@@ -1132,6 +1132,12 @@ footer .copyright {
 .post .post-content {
   padding: 1rem;
   width: 70%;
+    p {
+        display:-webkit-box;
+        -webkit-box-orient:vertical;
+        overflow:hidden;
+        -webkit-line-clamp:2;
+    }
 }
 
 .post .post-content .post-date,
