@@ -15,6 +15,8 @@ tags: [java, create, read, update, delete, crud]
 -json파일 서버 업로드 및 .bat실행
 
 -build.grade dependencies 설정
+-dependencies는 한번에 하나씩만 넣고 저장하여 적용시켜야한다. 여러개를 한번에 하면 용량 문제로 제대로 적용이 안될 수 있다.   
+
 ```java
 dependencies {
     // Use JUnit Jupiter for testing.

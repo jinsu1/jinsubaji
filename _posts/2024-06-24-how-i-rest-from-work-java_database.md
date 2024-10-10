@@ -10,6 +10,18 @@ tags: [java, insert, update, search, delete, mysql, sql]
 
 # <span style="color:#616161; font-weight:bold;">JAVA DB연동하기(MySQL)</span>
 
+- int와 integer의 차이   
+    - int   
+    1)산술 연산 가능   
+    2)null로 초기화 불가능   
+    3)저장공간이 4Byte로 작음   
+    
+    - integer   
+    1)Unboxing하지 않을 시 산술 연산이 불가능   
+    2)null 값으로 처리 가능   
+    3)저장공간이 큼   
+    4)null값으로 처리가 가능해 SQL에 용이하게 쓰인다.   
+
 ## <span style="color:#ffa59c; font-weight:bold;">Setting</span>
 
 -build.grade dependencies 설정
