@@ -14,7 +14,7 @@ tags: [java]
 -환경변수 설정 => JAVA_HOME 변수 생성, jdk경로 입력   
 -path에 jdk bin 경로 입력   
 
--Extension Pack for Java (자바 개발에 필요한 필수 익스텐션 모음   )   
+-Extension Pack for Java (자바 개발에 필요한 필수 익스텐션 모음)   
 -PlantUML (클래스 다이어그램 생성 도구)   
 -PlantUML Previewer (PlantUML로 작성된 다이어그램 뷰어)   
 -PlantUML Syntax (PlantUML 문법 강조 도구)   

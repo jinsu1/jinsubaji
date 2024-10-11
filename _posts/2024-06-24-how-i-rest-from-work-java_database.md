@@ -656,3 +656,7 @@ public class Ex07_CountEx {
 }
 
 ```
+
+
+selectone 단일검색
+selectlist 전체검색
