@@ -7,24 +7,24 @@ img: /postImg/site.jpg # Add image post (optional)
 fig-caption: caption # Add figcaption (optional)
 tags: [font, img, icon, etc]
 ---
-## Avaliable Site
+# <span style="color:#616161; font-weight:bold;">Avaliable Site</span>
 
-### font, icon, img
+## <span style="color:#ffa59c; font-weight:bold;">font, icon, img</span>
 -google fonts   
 -fontAwesome   
 - chrome web store의image  downloader - imageye (화면의 이미지 전체 다운로드)
 
-### color
+## <span style="color:#ffa59c; font-weight:bold;">color</span>
 -color picker
 
-### reperence
+## <span style="color:#ffa59c; font-weight:bold;">reperence</span>
 -GDWeb  
 -pinterest  
 -rwdb.kr  
 
-### HTML, CSS, javascript
+## <span style="color:#ffa59c; font-weight:bold;">HTML, CSS, javascript</span>
 -MDN  
 -w3school
 
-### ppt
+## <span style="color:#ffa59c; font-weight:bold;">ppt</span>
 -https://www.canva.com/

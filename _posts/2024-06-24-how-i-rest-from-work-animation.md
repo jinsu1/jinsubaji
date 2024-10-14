@@ -1,12 +1,15 @@
 ---
 layout: post
-title: 애니메이션 효과 모음
+title: css, js Libaray 모음
 date: 2024-09-04
-description: 애니메이션 효과 모음 # Add post description (optional)
-img: /postImg/site.jpg # Add image post (optional)
-fig-caption: 애니메이션 # Add figcaption (optional)
-tags: [api, animation]
+description: css, js Libaray 모음 # Add post description (optional)
+img: /postImg/openAPI.png # Add image post (optional)
+fig-caption: Libaray # Add figcaption (optional)
+tags: [libray, api, animation, javascript]
 ---
+#### 모음 정리 사이트
+https://inpa.tistory.com/category/Library/JS%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC%20%EB%AA%A8%EC%9D%8C?page=1
+
 ## <span style="color:#1E90FF; font-weight:bold;">AOS</span>
 
 >https://michalsnik.github.io/aos/

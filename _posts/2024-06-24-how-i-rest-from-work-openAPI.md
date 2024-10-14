@@ -3,7 +3,7 @@ layout: post
 title: openAPi 사용 예시
 date: 2024-09-05
 description: openAPi 사용 예시 # Add post description (optional)
-img: /postImg/site.jpg # Add image post (optional)
+img: /postImg/openAPI.png # Add image post (optional)
 fig-caption:  # Add figcaption (optional)
 tags: [ api, javascript, openAPI, json
  ]
