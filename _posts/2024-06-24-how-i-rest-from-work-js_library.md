@@ -3,7 +3,7 @@ layout: post
 title: css, js Libaray 모음
 date: 2024-09-04
 description: css, js Libaray 모음 # Add post description (optional)
-img: /postImg/openAPI.png # Add image post (optional)
+img: /postImg/js_library.png # Add image post (optional)
 fig-caption: Libaray # Add figcaption (optional)
 tags: [libray, api, animation, javascript]
 ---

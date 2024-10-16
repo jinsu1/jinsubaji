@@ -140,12 +140,25 @@ tags: [spring, boot, java]
 -project 생성 후 왼쪽 하단 상태표시줄에 java Error 오류가 뜬다면 jdk의 경로를 찾지 못하는 것이므로 setting.json에 들어가서 [ "java.import.gradle.java.home": "C:\\jdk-17.0.2" ] 를 추가하고 restart 해주자. java ready가 떠야한다.   
 
 ## <span style="color:#ffa59c; font-weight:bold;">Tips</span>
+
+#### common
+
+-read를 제외한 create, update, delete는 뒤로가기가 적용되면 안된다.(history를 남기면 안된다.) 중복 실행 위험성이 있다.   
+
+-historyback()을 사용하여 되돌아가면 controller를 거치지않기 때문에 새로 저장된 내용(쿠키값)이 반영되지 않는다.   
+
+#### cookie
+
+1) 유효 도메신 www.naver.com인경우 naver.com으로 설정   
+
+2) 유효시간 설정(0이하면 즉시 삭제, 초 단위)   
+
+3) 설정하지 않을 경우 브라우저 닫기 전까지 유지됨   
+
 #### controller
--controller에서 mapping 한 url은 접속할 때 사용할 url을 설정하는 것이고 return값이 있다면 그 문자열을 가지고 return 값.html을 찾아감 
+1) controller에서 mapping 한 url은 접속할 때 사용할 url을 설정하는 것이고 return값이 있다면 그 문자열을 가지고 return 값.html을 찾아감 
 
--return 값이 없을 경우 mapping한 url을 파일이름으로 간주하고 url.html을 찾아감
+2) return 값이 없을 경우 mapping한 url을 파일이름으로 간주하고 url.html을 찾아감
 
--@ResponseBody 어노테이션 : return은 하되, mapping한 url을 파일이름으로 간주하고 찾아가고 싶을 때 사용한다. return은 하고싶으나 return값을 url로 사용하고 싶지 않을 때 사용하면 될 것 같다.   
-
-
+3) @ResponseBody 어노테이션 : return은 하되, mapping한 url을 파일이름으로 간주하고 찾아가고 싶을 때 사용한다. return은 하고싶으나 return값을 url로 사용하고 싶지 않을 때 사용하면 될 것 같다. 
 

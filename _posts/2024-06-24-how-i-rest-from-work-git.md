@@ -40,4 +40,3 @@ $ ssh-keygen -t ed25519 -C "본인메일@gmail.com"
 -git pull origin main
  
 [Git사용설명서.PDF](https://github.com/user-attachments/files/16408329/05-Github.pdf)   
-
