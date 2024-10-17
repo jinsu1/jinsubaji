@@ -147,6 +147,20 @@ tags: [spring, boot, java]
 
 -historyback()을 사용하여 되돌아가면 controller를 거치지않기 때문에 새로 저장된 내용(쿠키값)이 반영되지 않는다.   
 
+-@Component : 아래 클래스는 bean임을 스프링에게 알려줌. 자동으로 싱글톤패턴 생성. 멤버변수에 @Autowired 어노테이션 해줘야함. 이제 getInstance()는 싱글톤을 안쓰므로 String ipAddr = utilHelper.getClientIp(request);로 instance부분을 ClientIP()로 바꾸어줌
+
+#### 파일 생성 순서
+    1) build.gradle
+    2) resources/logback-spring.xml
+    3) static/favicon,robot
+    4) exceptions
+    5) helpers
+    6) interceptors
+    7) services
+    8) serviceImpl
+    9) controllers
+    10) templates/index.html
+
 #### cookie
 
 1) 유효 도메신 www.naver.com인경우 naver.com으로 설정   

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Avaliable_Site
+title: 유용한 사이트 모음
 date: 2024-08-01
 description: Avaliable_Site # Add post description (optional)
 img: /postImg/site.jpg # Add image post (optional)
 fig-caption: caption # Add figcaption (optional)
 tags: [font, img, icon, etc]
 ---
-# <span style="color:#616161; font-weight:bold;">Avaliable Site</span>
+# <span style="color:#616161; font-weight:bold;">유용한 사이트 모음</span>
 
 ## <span style="color:#ffa59c; font-weight:bold;">font, icon, img</span>
 -google fonts   
