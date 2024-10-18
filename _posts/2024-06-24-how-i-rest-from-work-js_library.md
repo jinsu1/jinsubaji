@@ -640,3 +640,13 @@ new Chart(mychart7, {
 });
 ```
 
+## <span style="color:#1E90FF; font-weight:bold;">mail 입력 창 도구</span>
+
+-ckeditor
+
+```javascript
+<script src="https://cdn.ckeditor.com/ckeditor5/37.0.1/classic/ckeditor.js"></script>
+<script>
+    ClassicEditor.create( document.querySelector('#content') );
+</script>
+```

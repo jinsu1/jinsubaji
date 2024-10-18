@@ -8,8 +8,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: 공부노트 # add your name
 author-img: jinsu.jpg # add your photo
-about-author:  LF will be replaced by CRLF the next time Git touches it
-=> git config –global core.autocrlf true# add description
+about-author: git config –global core.autocrlf true# add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github:  # add your Github handle
