@@ -29,23 +29,34 @@ tags: [spring, boot, java]
     1)Spring Web
     2)Spring Boot DevTools   
     3)Spring Boot Acturator Ops   
-    4)Thymeleaf Template Engines   
-    5) 직접추가 : implementation 'com.github.ua-parser:uap-java:1.6.1'
+    4)Thymeleaf Template Engines  
+    5)Lombok   
+    6)Java Mail Sender   
+    7)JDBC API   
+    8)MySQL Driver   
+    9)MyBatis Framework   
+    직접추가)  : implementation 'com.github.ua-parser:uap-java:1.6.1'   
+                 testCompileOnly 'org.projectlombok:lombok'             //test에서 lombok인식이 가능하게 함   
+                 testAnnotationProcessor 'org.projectlombok:lombok'   
 
 
 -setting.json 에 항목추가
     
     1) "java.debug.settings.hotCodeReplace": "auto",  > 디버그시 파일 저장 후 자동으로 코드 반영
-    2) "spring.dashboard.openWith": "external",     > 기본 웹브라우저 사용
+    2) "spring.dashboard.openWith": "external",       > 기본 웹브라우저 사용
     3) "spring-boot.ls.java.vmargs": [
         "-Djava.net.preferIPv4Stack=true"
-        ]                                           > VSCode가 자바 컴파일 후 프로그램을 실행할 때 JVM에 전달하는 파라미터   
+        ]                                             > VSCode가 자바 컴파일 후 프로그램을 실행할 때 JVM에 전달하는 파라미터   
 
 
 
 -실행 할 때는 왼쪽 탭의 Spring Boot Dashboard의 app에서 디버그를 이용해서 실행 (위에서 설치했던 extention)   
 
 #### resource/logback-spring.xml   
+
+-logger태그의 name속성에 패키지명을 제대로 입력하지 않으면 로그가 안나오거나 에러가 발생할 수 있음   
+
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 60초마다 설정 파일의 변경을 확인 하여 변경시 갱신 -->
@@ -135,6 +146,25 @@ tags: [spring, boot, java]
     </logger>
 </configuration>
 ```
+#### application.properties
+
+```
+spring.application.name=database
+
+#-------------------------------------------------
+# DATABASE 접속 정보
+#-------------------------------------------------
+# 기본 구성
+#spring.datasource.url=jdbc:mysql://127.0.0.1:3306/myschool?characterEncoding=UTF8
+#spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+# logback 연동 구성
+#spring.datasource.url=jdbc:log4jdbc:mysql://127.0.0.1:3306/myschool?characterEncoding=UTF8
+#spring.datasource.driver-class-name=net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+spring.datasource.url=jdbc:mysql://127.0.0.1:3306/mytest?characterEncoding=UTF8
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.datasource.username=root
+spring.datasource.password=123qwe!@#
+```
 
 ## <span style="color:#ffa59c; font-weight:bold;">Error</span>
 -project 생성 후 왼쪽 하단 상태표시줄에 java Error 오류가 뜬다면 jdk의 경로를 찾지 못하는 것이므로 setting.json에 들어가서 [ "java.import.gradle.java.home": "C:\\jdk-17.0.2" ] 를 추가하고 restart 해주자. java ready가 떠야한다.   
@@ -147,7 +177,15 @@ tags: [spring, boot, java]
 
 -historyback()을 사용하여 되돌아가면 controller를 거치지않기 때문에 새로 저장된 내용(쿠키값)이 반영되지 않는다.   
 
--@Component : 아래 클래스는 bean임을 스프링에게 알려줌. 자동으로 싱글톤패턴 생성. 멤버변수에 @Autowired 어노테이션 해줘야함. 이제 getInstance()는 싱글톤을 안쓰므로 String ipAddr = utilHelper.getClientIp(request);로 instance부분을 ClientIP()로 바꾸어줌
+-@Component : 아래 클래스는 bean임을 스프링에게 알려줌. 자동으로 싱글톤패턴 생성. 멤버변수에 @Autowired 어노테이션 해줘야함. 이제 getInstance()는 싱글톤을 안쓰므로 String ipAddr = utilHelper.getClientIp(request);로 instance부분을 ClientIP()로 바꾸어줌   
+
+-test에서 lombok인식되도록하려면 dependencis를 추가해야한다.   
+
+```java
+testAnnotationProcessor 'org.projectlombok:lombok'
+testCompileOnly 'org.projectlombok:lombok'
+```
+
 
 #### 파일 생성 순서
     1) build.gradle
