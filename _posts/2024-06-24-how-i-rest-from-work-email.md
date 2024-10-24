@@ -174,6 +174,8 @@ public class MailController {
 ```
 
 ## <span style="color:#ffa59c; font-weight:bold;">Error</span>
--userName 인증 실패 : application.properties에서 설정한 본인 이메일로만 전송가능  
+-userName 인증 실패 : application.properties에서 설정한 본인 이메일로만 전송가능   
+
+
 
 
