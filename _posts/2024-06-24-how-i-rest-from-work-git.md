@@ -38,5 +38,10 @@ $ ssh-keygen -t ed25519 -C "본인메일@gmail.com"
 
 -git push -f origin main(-f옵션 : 리포내용과 관계없이 내 프로젝트를 강제로 업로드함. 팀원이 있을 경우 팀원이 푸쉬할 때 충돌이 발생할 수 있으니 개인이나 꼭 필요한 상황에만 사용)   
 -git pull origin main
+
+## Git 복원
+
+-revert명령어 뒤에 github commit 내역 오른쪽에나와있는 문자열을 입력해준다.   
+> ex)git revert baf47bb
  
 [Git사용설명서.PDF](https://github.com/user-attachments/files/16408329/05-Github.pdf)   

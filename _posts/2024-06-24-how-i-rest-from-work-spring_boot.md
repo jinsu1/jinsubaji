@@ -53,6 +53,7 @@ tags: [spring, boot, java]
 -실행 할 때는 왼쪽 탭의 Spring Boot Dashboard의 app에서 디버그를 이용해서 실행 (위에서 설치했던 extention)   
 
 #### resource/logback-spring.xml   
+-log 찍기   
 
 -logger태그의 name속성에 패키지명을 제대로 입력하지 않으면 로그가 안나오거나 에러가 발생할 수 있음   
 
@@ -165,6 +166,9 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.datasource.username=root
 spring.datasource.password=123qwe!@#
 ```
+
+## <span style="color:#ffa59c; font-weight:bold;">천의 자리 콤마 찍기</span>
+-${#numbers.formatInteger(professor.comm, 1, 'COMMA')}   
 
 ## <span style="color:#ffa59c; font-weight:bold;">Error</span>
 -project 생성 후 왼쪽 하단 상태표시줄에 java Error 오류가 뜬다면 jdk의 경로를 찾지 못하는 것이므로 setting.json에 들어가서 [ "java.import.gradle.java.home": "C:\\jdk-17.0.2" ] 를 추가하고 restart 해주자. java ready가 떠야한다.   
