@@ -744,3 +744,132 @@ document.querySelector("#close-popup").addEventListener('click', e => {
     }
 });
 ```
+
+## <span style="color:#1E90FF; font-weight:bold;">input 박스 focus 이벤트</span>
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력창</title>
+    <style>
+
+    .container_w1200 {
+        margin-top: 80px;
+        width: 1200px;
+        margin: 80px auto 0;
+    }
+
+    .login_input{
+        appearance: none;
+        width: 100%;
+        border: 0;
+        padding: 28px 0 20px;
+        font-size: 18px;
+        color: var(--color-black-3);
+        font-weight: 700;
+        transition: all .15s ease;
+        border-bottom: 1px solid #e1e1e1;
+        outline: none;
+    }
+        
+    .placeholder {
+        font-size: 18px;
+    }
+
+    .placeholder_hide {
+        font-size: 14px;;
+    }
+
+    .input_label {
+        position: relative;
+        font-size: 14px;
+        color: var(--color-silver);
+        display:flex;
+    }
+
+    .input_label:focus-within {
+
+        .input_focus_line::before{
+            width: 50%;
+        }
+
+        .input_focus_line::after {
+            width: 50%;
+        }
+
+        .placeholder {
+            top:0px;
+            font-size:14px;
+
+            .placeholder_hide {
+                display: none;
+            }
+        }
+    }
+
+    .input_focus_line::before {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: blue;
+        content: "";
+        transition: .4s;
+        -webkit-transition: all .4s ease;
+    }
+
+    .input_focus_line::after {
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        width: 0;
+        height: 2px;
+        background-color: blue;
+        content: "";
+        transition: .4s;
+        -webkit-transition: all .4s ease;
+    }
+
+    .placeholder {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        font-size: 18px;
+        transform-origin: 0 0;
+        transform: translateZ(0);
+        transition: all .2s ease;
+        pointer-events: none;
+        color: #888;
+        z-index: 1;
+    }
+
+
+    .find {
+        padding: 72px 0;
+        margin: 0 306px;
+    }
+
+    </style>
+</head>    
+<body>
+    <div class="container_w1200">
+        <div class="find">
+            <div id="find_id" class="tab_page tab_page_active">
+                <form action="#">
+                    <label for="userName" class="input_label">
+                        <input type="text" class="login_input" placeholder="" />
+                        <div class="input_focus_line">
+                            <span class="placeholder">이름<span class="placeholder_hide">( 띄어쓰기 없이 입력하세요. )</span>
+                        </div>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </div>   
+</body>
+</html>
+```
