@@ -218,3 +218,11 @@ testCompileOnly 'org.projectlombok:lombok'
 
 3) @ResponseBody 어노테이션 : return은 하되, mapping한 url을 파일이름으로 간주하고 찾아가고 싶을 때 사용한다. return은 하고싶으나 return값을 url로 사용하고 싶지 않을 때 사용하면 될 것 같다. 
 
+
+#### Spring Boot 독립실행
+
+-프로젝트의 최상위 폴더의 경로로 cmd를 열고 gradlew bootRun을 입력하면 backend가 실행된다. (gradlew.bat이 실행되는 것)   
+
+#### fragments error
+
+-header 태그안은 th:fragment이고 html에서@{/flagments/~} 는 경로이므로 폴더명을 써야한다 s의 유무 확인   
