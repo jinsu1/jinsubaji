@@ -762,7 +762,7 @@ document.querySelector("#close-popup").addEventListener('click', e => {
         margin: 80px auto 0;
     }
 
-    .login_input{
+    .input_box{
         appearance: none;
         width: 100%;
         border: 0;
@@ -803,6 +803,7 @@ document.querySelector("#close-popup").addEventListener('click', e => {
         .placeholder {
             top:0px;
             font-size:14px;
+            color: rgb(181, 181, 181);
 
             .placeholder_hide {
                 display: none;
@@ -861,7 +862,7 @@ document.querySelector("#close-popup").addEventListener('click', e => {
             <div id="find_id" class="tab_page tab_page_active">
                 <form action="#">
                     <label for="userName" class="input_label">
-                        <input type="text" class="login_input" placeholder="" />
+                        <input type="text" class="login_box" placeholder="" />
                         <div class="input_focus_line">
                             <span class="placeholder">이름<span class="placeholder_hide">( 띄어쓰기 없이 입력하세요. )</span>
                         </div>
