@@ -226,3 +226,4 @@ testCompileOnly 'org.projectlombok:lombok'
 #### fragments error
 
 -header 태그안은 th:fragment이고 html에서@{/flagments/~} 는 경로이므로 폴더명을 써야한다 s의 유무 확인   
+
