@@ -1124,9 +1124,10 @@ footer .copyright {
   width: 30%;
   max-width: 100%;
   min-height: 11rem;
-  -webkit-background-size: cover;
-          background-size: cover;
+  -webkit-background-size: contain;
+          background-size: contain;
   background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .post .post-content {
