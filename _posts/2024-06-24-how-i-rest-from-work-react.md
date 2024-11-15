@@ -48,12 +48,12 @@ tags: [react, reactJS, setting]
 
 8 ) 자동 생성된 .git과 .gitignore 제거 
 
-> 수동으로 해도되고 명령어로 해도 됨. 명령어 : remdir /q /s /git, del .gitignore   
+> 수동으로 해도되고 명령어로 해도 됨. 명령어 : rmdir /q /s .git, del .gitignore   
 
 9 ) git 사용할 경우 처음 프로젝트 최상위 폴더로 이동하여 .gitignore 생성 후 아래 코드 입력 (안하면 git push할 때 엄청난 쓸모없는 파일이 올라감)   
 
 ```
-/node_modules
+node_modules/
 .vscode/
 
 .yarn/*
