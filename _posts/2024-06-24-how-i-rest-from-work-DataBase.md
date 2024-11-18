@@ -21,9 +21,9 @@ tags: [database, mysql, crud, setting]
 
 -원하는 위치에 압축을 푼다(폴더 경로 한글 금지)   
 
--bin폴더 밑에 data 폴더 생성, 빈 텍스트 파일 생성 후 my.ini로 확장자까지 변경   
+-bin폴더에 data 폴더와 빈 텍스트 파일 생성 후 my.ini로 확장자까지 변경   
 
--my.ini 에 아래 내용 입력   
+-my.ini 에 아래 내용 입력(본인이 mysql 다운 받은 경로와 data폴더 경로)   
 
 ```html
 [mysqld]
@@ -40,6 +40,7 @@ port=3306
 -시스템 변수 Path에 bin경로 추가 (%MYSQL_HOME%\bin)   
 
 -MySQL 초기화 명령 수행 => cmd 확인 버튼으로 열지말고 Ctrl+Shift+Enter로 관리자 권한으로 실행   
+
 -mysqld --initialize 입력 => data폴더 안에 파일들이 생성되면 성공   
 
 -MySQL을 윈도우 서비스로 등록 => mysqld --install  
@@ -52,7 +53,9 @@ port=3306
 > -u : user의 이름을 입력하기 위한 옵션. 여기서 user이름은 root
 > -p : password를 입력하기 위한 옵션. 엔터 후 위의 임시 비밀번호 붙여넣기   
 
--관리자 계정의 비밀번호 변경하기 => alter user 'root'@'localhost' identified with mysql_native_password by '사용할 비밀번호';   
+-관리자 계정의 비밀번호 변경하기 => alter user 'root'@'localhost' identified with mysql_native_password by '사용할 비밀번호';  
+
+>mysql 버전이 업데이트 되면서 mysql_native_password 명령어는 사용할 수 없다.. 최신 명령어는 곧 추가하겠음
 
 -mysql재접속하며 변경한 비밀번호 확인   
 

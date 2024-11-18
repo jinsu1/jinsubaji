@@ -48,7 +48,7 @@ tags: [react, reactJS, setting]
 
 8 ) 자동 생성된 .git과 .gitignore 제거 
 
-> 수동으로 해도되고 명령어로 해도 됨. 명령어 : rmdir /q /s .git, del .gitignore   
+> 수동으로 해도되고 명령어로 해도 됨. 명령어 : rmdir /q /s .git, derl .gitignore   
 
 9 ) git 사용할 경우 처음 프로젝트 최상위 폴더로 이동하여 .gitignore 생성 후 아래 코드 입력 (안하면 git push할 때 엄청난 쓸모없는 파일이 올라감)   
 
@@ -66,3 +66,37 @@ node_modules/
 ```
 
 10 ) yarn start 및 vscode 실행   
+
+-react는 git에서 push 받고 난 후 yarn -install을 하고나서 yarn start해야한다.   
+
+<br />
+
+## <span style="color:#ffa59c; font-weight:bold;">파일 정리<span>
+
+-public 폴더는 localhost:3000/ 의 root경로이다.   
+
+-src 폴더에서 자동으로 만들어진 파일들을 App.js, index.js를 제외하고는 삭제해도 된다.   
+
+-index.js 에서 React.StrictMode태그는 지운다.   
+
+
+## <span style="color:#ffa59c; font-weight:bold;">문법<span>
+
+-모든 js 파일 첫 줄에는 'import React from "react";' 리액트의 기본을 구성하는 패키지를 참조 해준다.    
+
+-새로만든 js 파일 마지막에는 export를 해줘야 다른 js파일에서 import할 수 있다.   
+
+> import Hello from "/MyComponent"; <-- import 구문 Hello 부분은 MyComponent에서 export한 클래스 및 파일명과 관계없이 이름을 지을 수 있고 이 이름은 태그로 사용된다.<br/> ex) ```<hello></hello>```
+
+-html태그들은 문법을 정확히 지켜야한다.   
+> ```<br>```은 에러, ```<br/>```로 써야한다.   
+
+-class는 className으로 대체해야만한다.   
+
+-return 에는 하나의 태그만 return가능하므로 여러개가 들어가야한다면 전체를 감싸는 태그로 하나의 덩어리로 만들어야한다.   
+
+-주석은 "{/* Hello와 World 라는 이름의 컴포넌트 출력 */}" 처럼 중괄호로 묶어서 사용해야 인식함   
+
+-```<React.StricMode>``` 이 적용되어 있는 경우, 선언만 하고 사용되지 않는 변수들에 대한 경고 메세지가 브라우저 콘솔에 표시된다. console.log를 통한 출력문이 2중으로 표시되는 단점이 있으므로 삭제하는 것을 권장하며 개발용이므로 최종 빌드시에는 반드시 제거하는 것이 좋다.
+
+-대문자로 시작하는 태그는 import해온 태그이고 소문자는 html 코드인 것으로 구별   
