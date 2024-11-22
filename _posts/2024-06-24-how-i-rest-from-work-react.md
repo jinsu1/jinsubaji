@@ -17,6 +17,9 @@ tags: [react, reactJS, setting]
 
 > 설치에 실패한 경우 수동 설치 해야함 ==>  https://classic.yarnpkg.com/latest.msi   
 
+-yarn add styled-components : styled.ul` css 기본 문법 `; styled.div 등 사용 가능   
+> import styled, {css} from 'styled-components';
+
 #### extention 설치
 
 1) Color Highlight   
@@ -100,3 +103,55 @@ node_modules/
 -```<React.StricMode>``` 이 적용되어 있는 경우, 선언만 하고 사용되지 않는 변수들에 대한 경고 메세지가 브라우저 콘솔에 표시된다. console.log를 통한 출력문이 2중으로 표시되는 단점이 있으므로 삭제하는 것을 권장하며 개발용이므로 최종 빌드시에는 반드시 제거하는 것이 좋다.
 
 -대문자로 시작하는 태그는 import해온 태그이고 소문자는 html 코드인 것으로 구별   
+
+-inline css는 json형식으로 변수에 담아서 사용하며 카멜표기법을 사용해야한다.   
+
+```java
+ const myStyle = {
+        backgroundColor: '#f60',
+        fontSize: '20px',
+        color: '#0f6',
+        fontWeight: 'bold',
+        padding: '10px 25px',
+        marginBottom: '10px'
+    };
+
+    return ( 
+        <div style={myStyle}>Hello React Css (1)</div>
+    );
+```
+-styled-component 사용법
+
+```javascript
+const MyGridContainer = styled.ul`
+    list-style :none;
+    padding: 0;
+    margin: 0;
+    width: 1024px;
+    border: 5px solid #cc0;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+`;
+
+const MyGridItem = styled.li`
+    width: ${props => props.width};
+`;
+
+
+ <MyGridContainer />
+```
+
+
+```javascript
+const MyGridItem = styled.li`
+    width: ${props => props.width};
+`;
+
+
+ <MyGridItem width={'30%'}>
+    <MyBox>Item1</MyBox>
+</MyGridItem>
+```
+-```<NavLink></NavLink>```를 사용하면 현 주소와 일치하는 요소에 자동으로 active className을 주기 때문에 CSS만 설정해 놓아도 active효과를 줄 수 있다.   
