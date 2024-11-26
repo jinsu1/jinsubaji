@@ -155,3 +155,29 @@ const MyGridItem = styled.li`
 </MyGridItem>
 ```
 -```<NavLink></NavLink>```를 사용하면 현 주소와 일치하는 요소에 자동으로 active className을 주기 때문에 CSS만 설정해 놓아도 active효과를 줄 수 있다.   
+
+-use가 앞에 붙는 함수는 특정 상황에 자동실행되는 함수들로 react의 핵심요소 중 하나 이다.   
+
+1) useEffect :  기본적으로 렌더링 직후마다 실행되고 state, props값이 변경 될 때 실행됨   
+
+    1)콜백함수만 파라미터로 전달하면 모든 상태변화에 반응해 너무 자주 실행되서 실무에서 잘 사용하지 않고 두번째 파라미터로 전달되는 배열에 모니터링할 상태변수를 명시해서 특정 state, props값이 변결될 때만 실행하게함.   
+    => ex) 실행 > 적용 > 실행 > 적용 > 실행 > 적용 > ...
+
+    2)두번째 파라미터로 빈 배열을 설정하면 화면에 등장할 때 딱 1회만 실행되어 가장 많이 사용하는 방식 (get방식의 ajax호출, window 객체에 이벤트 정의 등 사용 )   
+    => ex) 실행 > 적용 > 적용 > 적용 > ...
+
+    3)window 객체 이벤트는 html이 바뀌지않으면 다른탭으로 이동해도 계속 이벤트가 실행됨 => 클로저 사용 (함수 안에서 다른 함수를 리턴) removeEventListener 사용   
+
+2) useRef : document.querySelector와 같이 참조변수로 사용한다.   
+
+- 모든 이벤트 핸들러는 무조건 "useCallback(이벤트핸들러, [ ])" 안에서 정의 (useCallback과 빈 배열 사용)   
+
+
+```html
+ const dname = useRef( );
+
+ <input ref={dname} ... 
+```
+
+> dname.current.value == document.querySelector("#dname").value
+
