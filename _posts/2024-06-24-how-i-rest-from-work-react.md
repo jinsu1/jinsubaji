@@ -183,6 +183,19 @@ const MyGridItem = styled.li`
 
 -데이터를 받아서 함수 파라미터로 사용할 경우 구조분해를 일반적으로 사용한다.
 
+-react에서는 ``(백틱)만 사용해서는 html태그를 인식못하고 그대로 출력되어 아래와 같이 논리연산자를 통해서 텍스트에 mark(형관펜)태그를 적용할 수있다   
+
+>검색 기능 구현 중 일부코드
+
+```js
+{ keyword ? (
+    <td dangerouslySetInnerHTML={{__html: v.dname.replaceAll(keyword, `<mark>${keyword}</mark>`)}}></td>
+) : (
+    <td>{v.dname}</td>
+)}
+```
+
+
 <br />
 
 ## <span style="color:#ffa59c; font-weight:bold;">로딩바 사용하기<span>
@@ -235,3 +248,4 @@ import MyContainer from '../MyContainer.js'
 
 <MyContainer></MyContainer>
 ```
+
