@@ -181,3 +181,57 @@ const MyGridItem = styled.li`
 
 > dname.current.value == document.querySelector("#dname").value
 
+-데이터를 받아서 함수 파라미터로 사용할 경우 구조분해를 일반적으로 사용한다.
+
+<br />
+
+## <span style="color:#ffa59c; font-weight:bold;">로딩바 사용하기<span>
+
+-https://mhnpd.github.io/react-loader-spinner/docs/components/infinity-spin
+
+-yarn add react-loader-spinner
+
+```javascript
+
+import { Blocks } from "react-loader-spinner;
+
+const [loading, setLoding ] = useState(false);
+
+...
+
+setLoading(true);
+setLoading(false);
+
+
+```
+-사이트에서 코드를 붙여넣고 wrapperStyle 속성을 추가해서 css를 커스텀할 수 있다.
+
+<br />
+
+## <span style="color:#ffa59c; font-weight:bold;">응용<span>
+
+-보통 react는 파일하나에 css와 js, html을 각 1:1:1로 사용하지만 그 중 하나를 다른 파일에서 재사용하고 싶을 경우 그 내용만을 export해서 다른 파일에서 import해서 사용할 수 있다
+
+```javascript
+파일명 -> MyContainer.js
+
+import styled from "styled-components";
+
+const MyContainer = styled.ul`
+css 내용
+`
+
+export default MyContainer;
+
+// 1가지 이상을 export 할 때
+export { SexLabel, EmbarkedLabel, SurvivedLabel }; 
+
+```
+<br />
+
+```javascript
+다른 파일 -> index.js
+import MyContainer from '../MyContainer.js'
+
+<MyContainer></MyContainer>
+```
