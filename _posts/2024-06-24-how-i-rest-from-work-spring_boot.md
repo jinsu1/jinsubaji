@@ -190,6 +190,12 @@ testAnnotationProcessor 'org.projectlombok:lombok'
 testCompileOnly 'org.projectlombok:lombok'
 ```
 
+-Controller(java)에서 만든 hello라는 변수를 자바스크립에서 사용하려면 html에서 th:attr에 dataset을 설정해서 자바스크립트에서 사용할 수 있다.   
+
+```html
+<div th:attr="data-id={hello}"></div>
+```
+
 
 #### 파일 생성 순서
     1) build.gradle
