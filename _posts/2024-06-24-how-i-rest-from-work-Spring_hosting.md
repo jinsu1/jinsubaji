@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "[Spring] 배포"
-date: 2024-11-15
-description: Spring Boot # Add post description (optional)
-img: /postImg/react.png # Add image post (optional)
-fig-caption: reactJS # Add figcaption (optional)
-tags: [react, reactJS, setting]
+date: 2024-12-22
+description: 카페24 호스팅 # Add post description (optional)
+img: /postImg/hosting.jpg # Add image post (optional)
+fig-caption: hosting # Add figcaption (optional)
+tags: [springboot, hosting, 배포, 카페24]
 ---
 # <span style="color:#616161; font-weight:bold;">스프링부트 배포</span>
 *jar => 독립실행형
