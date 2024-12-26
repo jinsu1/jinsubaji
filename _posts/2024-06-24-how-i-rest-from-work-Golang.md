@@ -5,7 +5,7 @@ date: 2024-12-26
 description: golang # Add post description (optional)
 img: /postImg/golang.png # Add image post (optional)
 fig-caption: reactJS # Add figcaption (optional)
-tags: [Golang, Go 언어]
+tags: [Golang, Go]
 ---
 # <span style="color:#616161; font-weight:bold;">Go 언어</span></span>
 

@@ -5,7 +5,7 @@ date: 2024-12-22
 description: 카페24 호스팅 # Add post description (optional)
 img: /postImg/hosting.jpg # Add image post (optional)
 fig-caption: hosting # Add figcaption (optional)
-tags: [springboot, hosting, 배포, 카페24]
+tags: [springboot, hosting]
 ---
 # <span style="color:#616161; font-weight:bold;">스프링부트 배포</span>
 *jar => 독립실행형
