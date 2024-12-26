@@ -52,3 +52,6 @@ tags: [jekyll ,ruby, blog, git, markdown]
 
 -ruby block in replace_bin_path   
 => gemfile 위치에서 gem bundler install (버전 업그레이드)
+
+-Liquid Exception: Liquid syntax error    
+=> 코드블럭 문법 오류 : "{" 중괄호가 연속으로 두 개 들어가면 jekyll에서는 변수로 인식해서 에러가 발생한다. {퍼센트 raw 퍼센트} ... {퍼센트 rawend 퍼센트} 로 감싸주면 정상적으로 build가 진행된다.

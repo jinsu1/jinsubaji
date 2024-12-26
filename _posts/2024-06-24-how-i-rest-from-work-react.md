@@ -187,12 +187,17 @@ const MyGridItem = styled.li`
 
 >검색 기능 구현 중 일부코드
 
+
 ```js
+{% raw %}
+
 { keyword ? (
     <td dangerouslySetInnerHTML={{__html: v.dname.replaceAll(keyword, `<mark>${keyword}</mark>`)}}></td>
 ) : (
     <td>{v.dname}</td>
 )}
+
+{% endraw %}
 ```
 
 
