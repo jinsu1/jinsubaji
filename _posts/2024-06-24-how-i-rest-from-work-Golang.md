@@ -40,3 +40,7 @@ tags: [Golang, Go 언어]
 
 -`fmt.Println("Hello, World!")` print의 P대문자 주의   
 
+-int => uint(unsigned)로 사용하면 음수 값을 가지지 못하는 대신 그 만큼 양수 값을 더 가지게되어 음수를 사용하지않는 값에 사용해서 바이트를 절약할 수 있다.   
+
+
+
