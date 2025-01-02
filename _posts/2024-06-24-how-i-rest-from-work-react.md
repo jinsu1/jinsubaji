@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "[ReactJS] 시작 및 설정"
+title: "[React] 시작 및 설정"
 date: 2024-11-15
-description: Spring Boot # Add post description (optional)
+description: React # Add post description (optional)
 img: /postImg/react.png # Add image post (optional)
 fig-caption: reactJS # Add figcaption (optional)
 tags: [react, reactJS, setting]
