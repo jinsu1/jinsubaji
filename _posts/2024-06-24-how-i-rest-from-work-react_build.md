@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] 빌드 및 스프링 병합"
-date: 2024-11-15
+date: 2025-01-02
 description: React&Spring # Add post description (optional)
 img: /postImg/react.png # Add image post (optional)
 fig-caption: reactJS # Add figcaption (optional)

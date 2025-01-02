@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[React] 시작 및 설정"
-date: 2024-11-15
+date: 2024-12-15
 description: React # Add post description (optional)
 img: /postImg/react.png # Add image post (optional)
 fig-caption: reactJS # Add figcaption (optional)
